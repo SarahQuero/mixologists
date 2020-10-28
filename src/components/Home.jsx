@@ -1,7 +1,12 @@
 import React from "react";
 import "./Style/Home.scss";
+import PresCard from "./PresCard";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <PresCard />
+    </div>
+  );
 }
 export default Home;

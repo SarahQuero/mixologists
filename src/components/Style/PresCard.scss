@@ -1,0 +1,48 @@
+$black: #19191c;
+$gold: #cbb075;
+$white: #ddd1c6;
+$marron: #846e66;
+
+.PresCard {
+  background-color: $black;
+  color: $gold;
+  padding: 30px;
+}
+
+.PresCard h2,
+.PresCard-desc-main {
+  text-align: center;
+}
+
+.PresCard-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.PresCard-card-txt {
+  background-color: $white;
+  color: $marron;
+  margin-right: 50px;
+  padding: 10px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.PresCard-card-txt h3 {
+  text-align: center;
+}
+
+.PresCard-card-txt button {
+  margin-top: 15px;
+  padding: 10px;
+  color: $gold;
+  background-color: $black;
+}
+
+.PresCard-wrapper img {
+  width: 45%;
+}
