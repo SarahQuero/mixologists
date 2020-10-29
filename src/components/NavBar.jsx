@@ -22,7 +22,7 @@ class NavBar extends React.Component {
       <div>
         <nav>
           <div className="navElements">
-            <h2 id="titleNav">Experimental Cocktail</h2>
+            <h2 id="titleNav">Experimental Cocktail Club</h2>
             <div
               role="button"
               tabIndex="0"
@@ -45,18 +45,23 @@ class NavBar extends React.Component {
             <li>
               <Link to="/">HOME</Link>
             </li>
+            <span className="line"> </span>
             <li>
               <Link to="/Recipes">RECIPES</Link>
             </li>
+            <span className="line"> </span>
+            <li>
+              <Link to="/Lab">LAB COCKTAIL</Link>
+            </li>
+            <span className="line"> </span>
             <li>
               <Link to="/World">AROUND THE WORLD</Link>
             </li>
-            <li>
-              <Link to="/Lab">LAB</Link>
-            </li>
+            <span className="line"> </span>
             <li>
               <Link to="/Box">OUR BOXES</Link>
             </li>
+            <span className="line"> </span>
             <li>
               <Link to="/Contact">CONTACT</Link>
             </li>

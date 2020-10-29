@@ -39,15 +39,22 @@ nav {
   font-size: 30px;
   margin: 20px 0 10px;
 }
+#menu {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
 
 .menuClose {
-  display: none;
-  transition: 1s ease;
+  transform: translateY(-100%);
+  transition: 0.8s ease;
   background-color: rgba(27, 27, 27, 0.5);
 }
 .menuOpen {
+  transform: translateY(0);
   background-color: rgba(10, 10, 10, 0.5);
-  transition: 1s ease;
+  transition: 0.8s ease;
 }
 
 a {
@@ -55,7 +62,19 @@ a {
   text-decoration: none;
 }
 #titleNav {
-  padding: 0 350px 0 20px;
+  padding: 0 300px 0 20px;
   font-size: 50px;
   color: #cbb075;
+}
+
+#menu ul li:hover {
+  color: #cbb075;
+  transform: scale(1.5);
+  transition: 0.5s ease;
+}
+.line {
+  width: 3px;
+  height: 80px;
+  background-color: #cbb075;
+  border-radius: 10px;
 }
