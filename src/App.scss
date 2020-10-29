@@ -5,5 +5,19 @@
 }
 
 body {
-  background-color: grey;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, cursive;
+  background-color: #19191c;
+}
+
+h1 {
+  font-family: "Yesteryear", cursive;
+  color: #cbb075;
+  font-size: 3rem;
+}
+
+p {
+  font-family: "Assistant", sans-serif;
+  color: #cbb075;
+  font-size: 1.2rem;
 }
