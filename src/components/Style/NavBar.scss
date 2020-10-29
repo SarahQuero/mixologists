@@ -1,0 +1,61 @@
+nav {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  padding: 10px;
+  background-color: #19191c;
+}
+.menuBurger {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navElements {
+  display: flex;
+  justify-content: flex-end;
+}
+#titleMenu {
+  padding: 0 25px 0 20px;
+  font-size: 50px;
+  color: #cbb075;
+}
+.bars {
+  background-color: #cbb075;
+  width: 60px;
+  height: 6px;
+  margin: 6px 0;
+  border-radius: 1px;
+}
+#menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-direction: column;
+}
+#menu ul li {
+  color: white;
+  font-size: 30px;
+  margin: 20px 0 10px;
+}
+
+.menuClose {
+  display: none;
+  transition: 1s ease;
+  background-color: rgba(27, 27, 27, 0.5);
+}
+.menuOpen {
+  background-color: rgba(10, 10, 10, 0.5);
+  transition: 1s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+#titleNav {
+  padding: 0 350px 0 20px;
+  font-size: 50px;
+  color: #cbb075;
+}

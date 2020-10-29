@@ -6,11 +6,13 @@ import Lab from "./components/Lab";
 import World from "./components/World";
 import Box from "./components/Box";
 import Contact from "./components/Contact";
+import NavBar from "./components/NavBar";
 import "./App.scss";
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/Recipes" component={Recipes} />
