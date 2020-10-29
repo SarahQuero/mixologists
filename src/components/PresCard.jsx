@@ -1,34 +1,44 @@
 import React from "react";
 import "./Style/PresCard.scss";
-import cockImg from "../../public/images/cock_presCard.png";
+import PropTypes from "prop-types";
 
-const PresCard = () => (
+const PresCard = ({
+  title,
+  descMain,
+  imgRight,
+  cardTitle,
+  descCard,
+  button,
+  img,
+}) => (
   <div className="PresCard">
-    <h2>Recipes</h2>
-    <div className="PresCard-desc-main">
-      Deserunt ad ea fugiat officia consectetur exercitation excepteur dolore
-      excepteur cillum labore quis. Excepteur est sit voluptate laboris. Laborum
-      commodo laborum voluptate eiusmod officia sunt. Nisi anim deserunt dolore
-      magna reprehenderit commodo Lorem cupidatat mollit esse non. Esse velit
-      ipsum anim ad deserunt elit. Officia exercitation aliquip et mollit
-      consectetur ipsum aute ullamco non voluptate reprehenderit quis. Consequat
-      do voluptate eiusmod commodo aliquip exercitation pariatur veniam sint
-      nisi cillum anim deserunt.
-    </div>
-    <div className="PresCard-wrapper">
+    <h2>{title}</h2>
+    <div className="PresCard-desc-main">{descMain}</div>
+    <div
+      className={imgRight ? "PresCard-wrapper inversePres" : "PresCard-wrapper"}
+    >
       <div className="PresCard-card-txt">
-        <h3>Discover our cocktails</h3>
-        <div className="PresCard-card-desc">
-          Sint ullamco culpa nisi amet enim ut deserunt irure occaecat Lorem
-          dolore eiusmod tempor. Ea adipisicing nostrud proident adipisicing eu
-          occaecat tempor elit mollit tempor mollit occaecat. Occaecat enim
-          adipisicing ex eiusmod nisi nisi
+        <h3>{cardTitle}</h3>
+        <div className="PresCard-card-desc" key={imgRight}>
+          {descCard}
         </div>
-        <button type="button"> Discover now </button>
+        <button type="button"> {button} </button>
       </div>
-      <img src={cockImg} alt="Ouais ouais c'est bien" />
+      <div className="imgCard">
+        <img src={img} alt="ouais ouais" />
+      </div>
     </div>
   </div>
 );
+
+PresCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  descMain: PropTypes.string.isRequired,
+  imgRight: PropTypes.bool.isRequired,
+  cardTitle: PropTypes.string.isRequired,
+  descCard: PropTypes.string.isRequired,
+  button: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 export default PresCard;
