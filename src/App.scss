@@ -1,23 +1,40 @@
+/* Définition des couleurs
+Pour le texte : 
+doré : #CBB075
+marron : #846E66
+Pour le background : 
+marron foncé : #19191C
+marron clair : #DDD1C6
+doré : #CBB075 (uniquement pour le footer)
+*/
+
+// Font family
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+
+// Elements principaux de la page
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, cursive;
-  background-color: #19191c;
 }
 
-h1 {
-  font-family: "Yesteryear", cursive;
-  color: #cbb075;
-  font-size: 3rem;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-p {
-  font-family: "Assistant", sans-serif;
-  color: #cbb075;
-  font-size: 1.2rem;
-}
+// h1 {
+//   font-family: "Yesteryear", cursive;
+//   color: #cbb075;
+//   font-size: 3rem;
+// }
+
+// p {
+//   font-family: "Assistant", sans-serif;
+//   color: #cbb075;
+//   font-size: 1.2rem;
+// }

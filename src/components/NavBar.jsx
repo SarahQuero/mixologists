@@ -30,38 +30,35 @@ class NavBar extends React.Component {
               onClick={this.handleClick}
               onKeyDown={this.handleClick}
             >
-              <span className="bars" />
-              <span className="bars" />
-              <span className="bars" />
+              <span className="menuBars" />
+              <span className="menuBars" />
+              <span className="menuBars" />
             </div>
             <h2 id="titleMenu">MENU</h2>
           </div>
         </nav>
-        <div
-          id="menu"
-          className={menuOpen === false ? "menuClose" : "menuOpen"}
-        >
+        <div id="menu" className={menuOpen ? "menuOpen" : "menuClose"}>
           <ul>
             <li>
               <Link to="/">HOME</Link>
             </li>
-            <span className="line"> </span>
+            <span className="lineMenu" />
             <li>
               <Link to="/Recipes">RECIPES</Link>
             </li>
-            <span className="line"> </span>
+            <span className="lineMenu" />
             <li>
               <Link to="/Lab">LAB COCKTAIL</Link>
             </li>
-            <span className="line"> </span>
+            <span className="lineMenu" />
             <li>
               <Link to="/World">AROUND THE WORLD</Link>
             </li>
-            <span className="line"> </span>
+            <span className="lineMenu" />
             <li>
               <Link to="/Box">OUR BOXES</Link>
             </li>
-            <span className="line"> </span>
+            <span className="lineMenu" />
             <li>
               <Link to="/Contact">CONTACT</Link>
             </li>

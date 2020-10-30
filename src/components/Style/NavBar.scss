@@ -20,7 +20,7 @@ nav {
   font-size: 50px;
   color: #cbb075;
 }
-.bars {
+.menuBars {
   background-color: #cbb075;
   width: 60px;
   height: 6px;
@@ -44,25 +44,21 @@ nav {
   z-index: 10;
   height: 100%;
   width: 100%;
+  background-color: rgba(27, 27, 27, 0.5);
 }
 
 .menuClose {
   transform: translateY(-100%);
   transition: 0.8s ease;
-  background-color: rgba(27, 27, 27, 0.5);
 }
 .menuOpen {
   transform: translateY(0);
-  background-color: rgba(10, 10, 10, 0.5);
   transition: 0.8s ease;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 #titleNav {
-  padding: 0 300px 0 20px;
+  text-align: center;
+  padding: 0 20% 0 20px;
   font-size: 50px;
   color: #cbb075;
 }
@@ -72,7 +68,7 @@ a {
   transform: scale(1.5);
   transition: 0.5s ease;
 }
-.line {
+.lineMenu {
   width: 3px;
   height: 80px;
   background-color: #cbb075;
