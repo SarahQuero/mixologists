@@ -1,7 +1,8 @@
 import React from "react";
 import "./Style/Home.scss";
 import PresCard from "./PresCard";
-import cockImg from "../../public/images/cock_presCard.jpg";
+import presRecipies from "../../public/images/cock_presCard.jpg";
+import presLab from "../../public/images/presLab.png";
 
 const presList = [
   {
@@ -21,19 +22,12 @@ const presList = [
     occaecat tempor elit mollit tempor mollit occaecat. Occaecat enim
     adipisicing ex eiusmod nisi nisi`,
     button: "Discover now",
-    img: cockImg,
+    img: presRecipies,
     id: 1,
   },
   {
     title: "Lab cocktail",
-    descMain: `Deserunt ad ea fugiat officia consectetur exercitation excepteur dolore
-    excepteur cillum labore quis. Excepteur est sit voluptate laboris. Laborum
-    commodo laborum voluptate eiusmod officia sunt. Nisi anim deserunt dolore
-    magna reprehenderit commodo Lorem cupidatat mollit esse non. Esse velit
-    ipsum anim ad deserunt elit. Officia exercitation aliquip et mollit
-    consectetur ipsum aute ullamco non voluptate reprehenderit quis. Consequat
-    do voluptate eiusmod commodo aliquip exercitation pariatur veniam sint
-    nisi cillum anim deserunt.`,
+    descMain: "",
     imgRight: false,
     cardTitle: "About the lab cocktail",
     descCard: `Sint ullamco culpa nisi amet enim ut deserunt irure occaecat Lorem
@@ -41,7 +35,7 @@ const presList = [
     occaecat tempor elit mollit tempor mollit occaecat. Occaecat enim
     adipisicing ex eiusmod nisi nisi`,
     button: "Shake it !",
-    img: cockImg,
+    img: presLab,
     id: 2,
   },
 ];
