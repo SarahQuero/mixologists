@@ -11,21 +11,27 @@ const PresCard = ({
   button,
   img,
 }) => (
-  <div className="PresCard">
+  <div className={imgRight ? "PresCard" : "PresCard PresCard-white"}>
     <h2>{title}</h2>
     <div className="PresCard-desc-main">{descMain}</div>
     <div
-      className={imgRight ? "PresCard-wrapper inversePres" : "PresCard-wrapper"}
+      className={imgRight ? "PresCard-wrapper" : "PresCard-wrapper inversePres"}
     >
-      <div className="PresCard-card-txt">
+      <div
+        className={
+          imgRight
+            ? "PresCard-card-txt"
+            : "PresCard-card-txt PresCard-card-txt-white"
+        }
+      >
         <h3>{cardTitle}</h3>
         <div className="PresCard-card-desc" key={imgRight}>
           {descCard}
         </div>
         <button type="button"> {button} </button>
       </div>
-      <div className="imgCard">
-        <img src={img} alt="ouais ouais" />
+      <div className="PresCard-imgCard">
+        <img src={img} alt="cocktails" />
       </div>
     </div>
   </div>

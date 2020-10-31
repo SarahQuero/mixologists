@@ -39,14 +39,19 @@ $marron: #846e66;
   position: relative;
 }
 
+.PresCard-white {
+  background-color: $white;
+  color: $marron;
+}
+
+.PresCard-card-txt-white {
+  background-color: $black;
+  color: $gold;
+}
+
 .PresCard-card-txt h3 {
   text-align: center;
   margin: 60px 0;
-  background-color: $white;
-}
-
-.PresCard-card-desc {
-  background-color: $white;
 }
 
 .PresCard-card-txt button {
@@ -63,7 +68,12 @@ $marron: #846e66;
   background-color: $black;
 }
 
-.imgCard {
+.PresCard-card-txt-white button {
+  color: $black;
+  background-color: $gold;
+}
+
+.PresCard-imgCard {
   height: 500px;
   width: 500px;
   overflow: hidden;
@@ -73,7 +83,7 @@ $marron: #846e66;
   border-radius: 10px;
 }
 
-.imgCard img {
+.PresCard-imgCard img {
   width: 500px;
   height: 500px;
 }
@@ -83,7 +93,7 @@ $marron: #846e66;
     width: 80%;
     margin-left: 10%;
   }
-  .imgCard {
+  .PresCard-imgCard {
     margin-top: 20px;
     width: 100%;
   }
