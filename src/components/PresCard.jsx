@@ -1,6 +1,7 @@
 import React from "react";
 import "./Style/PresCard.scss";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const PresCard = ({
   title,
@@ -10,6 +11,7 @@ const PresCard = ({
   descCard,
   button,
   img,
+  path,
 }) => (
   <div className={imgRight ? "PresCard" : "PresCard PresCard-white"}>
     <h2>{title}</h2>
@@ -28,7 +30,9 @@ const PresCard = ({
         <div className="PresCard-card-desc" key={imgRight}>
           {descCard}
         </div>
-        <button type="button"> {button} </button>
+        <Link to={path}>
+          <button type="button"> {button} </button>
+        </Link>
       </div>
       <div className="PresCard-imgCard">
         <img src={img} alt="cocktails" />
@@ -45,6 +49,7 @@ PresCard.propTypes = {
   descCard: PropTypes.string.isRequired,
   button: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default PresCard;

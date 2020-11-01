@@ -24,6 +24,7 @@ const presList = [
     button: "Discover now",
     img: presRecipies,
     id: 1,
+    path: "/Recipes",
   },
   {
     title: "Lab cocktail",
@@ -37,6 +38,7 @@ const presList = [
     button: "Shake it !",
     img: presLab,
     id: 2,
+    path: "/Lab",
   },
 ];
 
@@ -55,6 +57,7 @@ function Home() {
           button={el.button}
           img={el.img}
           key={el.id}
+          path={el.path}
         />
       ))}
     </div>
