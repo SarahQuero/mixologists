@@ -9,20 +9,27 @@ import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/Recipes" component={Recipes} />
-        <Route path="/Lab" component={Lab} />
-        <Route path="/World" component={World} />
-        <Route path="/Box" component={Box} />
-        <Route path="/Contact" component={Contact} />
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/Recipes" component={Recipes} />
+          <Route path="/Lab" component={Lab} />
+          <Route path="/World" component={World} />
+          <Route path="/Box" component={Box} />
+          <Route path="/Contact" component={Contact} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
