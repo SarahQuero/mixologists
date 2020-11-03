@@ -7,6 +7,7 @@ import World from "./components/World";
 import Box from "./components/Box";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import "./App.scss";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Box" component={Box} />
         <Route path="/Contact" component={Contact} />
       </Switch>
+      <Footer />
     </div>
   );
 }

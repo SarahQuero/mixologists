@@ -20,7 +20,6 @@ function FicheCocktail({
       </div>
       <div className="fiche-cocktail-description">
         <p>
-          {" "}
           Le pisco sour est un cocktail typique de la cuisine sud-américaine à
           base de pisco et de jus de citron vert. Le nom de cette boisson
           provient à la fois du pisco, lalcool utilisé et sour, mot anglais en
