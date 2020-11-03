@@ -41,7 +41,7 @@ nav {
 .menuBars::after {
   background-color: #cbb075;
   position: absolute;
-  content: '';
+  content: "";
   width: 55px;
   height: 6px;
   border-radius: 1px;
@@ -59,10 +59,10 @@ nav {
   background-color: transparent;
 }
 
-.menuBurger.open .menuBars::before{
+.menuBurger.open .menuBars::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
-.menuBurger.open .menuBars::after{
+.menuBurger.open .menuBars::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 #menu ul {
@@ -87,7 +87,6 @@ nav {
   width: 100%;
   background-color: rgba(27, 27, 27, 0.5);
 }
-
 .menuClose {
   transform: translateY(-100%);
   transition: 0.8s ease;
@@ -116,7 +115,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width : 320px) and (max-width : 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   nav {
     font-size: 20px;
   }
@@ -151,7 +150,7 @@ nav {
     height: 40px;
   }
 }
-@media only screen and (min-width : 769px) and (max-width : 878px) {
+@media only screen and (min-width: 769px) and (max-width: 878px) {
   nav {
     font-size: 18px;
   }
@@ -180,7 +179,7 @@ nav {
     height: 40px;
   }
 }
-@media only screen and (min-width : 879px) and (max-width : 1253px) {
+@media only screen and (min-width: 879px) and (max-width: 1253px) {
   nav {
     font-size: 25px;
   }
@@ -207,7 +206,7 @@ nav {
     height: 50px;
   }
 }
-@media only screen and (min-width : 1254px) and (max-width : 1550px) {
+@media only screen and (min-width: 1254px) and (max-width: 1550px) {
   #menu ul {
     margin-top: 150px;
     font-size: 30px;
