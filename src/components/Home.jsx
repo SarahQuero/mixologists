@@ -3,7 +3,7 @@ import "./Style/Home.scss";
 
 function Home() {
   return (
-    <div>
+    <div className="margin">
       <h1>Home</h1>
       <p>Lorem ipsum</p>
     </div>

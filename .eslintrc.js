@@ -1,9 +1,14 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
   },
-  extends: ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  extends: [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+  ],
+  parser: "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -12,5 +17,10 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "import/prefer-default-export": 0,
+    "react/state-in-constructor": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "no-console": 0,
+  },
 };
