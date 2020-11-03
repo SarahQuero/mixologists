@@ -27,11 +27,13 @@ class NavBar extends React.Component {
               src="https://i.ibb.co/zbPyQZW/logo-experimentalcocktail.png"
               alt="logo"
             />
-            <h2 id="titleNav">Experimental Cocktail Club</h2>
+            <div className="titleNavContainer">
+              <h2 id="titleNav">Experimental Cocktail Club</h2>
+            </div>
             <div className="menuBurgerContainer">
               <div
                 role="button"
-                tabIndex="0"
+                tabIndex="-1"
                 className={menuOpen ? "menuBurger open" : "menuBurger"}
                 onClick={this.handleClick}
                 onKeyDown={this.handleClick}
