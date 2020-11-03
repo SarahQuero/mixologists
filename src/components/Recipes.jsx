@@ -28,6 +28,7 @@ function Recipes() {
         instructions={piscoSour.strInstructions}
         ingredient1={piscoSour.strIngredient1}
         ingredient2={piscoSour.strIngredient2}
+        ingredient3={piscoSour.strIngredient3}
       />
     </div>
   );
