@@ -1,0 +1,142 @@
+nav {
+  display: flex;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  padding: 10px;
+  background-color: #19191c;
+  transition: 0.7s ease;
+  top: 0;
+  color: #cbb075;
+  font-size: 40px;
+}
+.menuBurger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  outline-width: 0;
+  margin-right: 20px;
+}
+.menuBurgerContainer {
+  display: flex;
+  align-items: center;
+}
+.navElements {
+  display: flex;
+  justify-content: flex-end;
+}
+.menuBars {
+  background-color: #cbb075;
+  width: 55px;
+  height: 6px;
+  margin: 6px 0;
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.menuBars::before,
+.menuBars::after {
+  background-color: #cbb075;
+  position: absolute;
+  content: '';
+  width: 55px;
+  height: 6px;
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.menuBars::before {
+  transform: translateY(-16px);
+}
+.menuBars::after {
+  transform: translateY(16px);
+}
+
+.menuBurger.open .menuBars {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+
+.menuBurger.open .menuBars::before{
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menuBurger.open .menuBars::after{
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+#menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-direction: column;
+  margin-top: 100px;
+}
+#menu ul li {
+  color: white;
+  font-size: 30px;
+  margin: 20px 0 10px;
+}
+#menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(27, 27, 27, 0.5);
+}
+
+.menuClose {
+  transform: translateY(-100%);
+  transition: 0.8s ease;
+}
+.menuOpen {
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+#menu ul li:hover {
+  color: #cbb075;
+  transform: scale(1.5);
+  transition: 0.5s ease;
+}
+.lineMenu {
+  width: 3px;
+  height: 80px;
+  background-color: #cbb075;
+  border-radius: 10px;
+}
+.logoNavBar {
+  height: 75px;
+  margin-right: 35vh;
+}
+#titleNav {
+  margin-right: 35vh;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+  nav {
+    font-size: 18px;
+  }
+  .logoNavBar {
+    height: 45px;
+  }
+  .menuBars {
+    width: 30px;
+    height: 3px;
+  }
+  .menuBars::before,
+  .menuBars::after {
+    width: 30px;
+    height: 3px;
+  }
+  .menuBars::before {
+    transform: translateY(-8px);
+  }
+  .menuBars::after {
+    transform: translateY(8px);
+  }
+  .menuBurger {
+    margin-right: 10px;
+  }
+}
