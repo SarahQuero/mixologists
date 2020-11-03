@@ -1,4 +1,5 @@
 nav {
+  display: flex;
   position: fixed;
   z-index: 20;
   width: 100%;
@@ -6,6 +7,8 @@ nav {
   background-color: #19191c;
   transition: 0.7s ease;
   top: 0;
+  color: #cbb075;
+  font-size: 40px;
 }
 .menuBurger {
   position: relative;
@@ -16,15 +19,15 @@ nav {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   outline-width: 0;
+  margin-right: 20px;
+}
+.menuBurgerContainer {
+  display: flex;
+  align-items: center;
 }
 .navElements {
   display: flex;
   justify-content: flex-end;
-}
-#titleMenu {
-  padding: 0 25px 0 20px;
-  font-size: 50px;
-  color: #cbb075;
 }
 .menuBars {
   background-color: #cbb075;
@@ -92,14 +95,6 @@ nav {
   transform: translateY(0);
   transition: 0.8s ease;
 }
-
-#titleNav {
-  text-align: center;
-  padding: 0 20% 0 20px;
-  font-size: 50px;
-  color: #cbb075;
-}
-
 #menu ul li:hover {
   color: #cbb075;
   transform: scale(1.5);
@@ -110,4 +105,38 @@ nav {
   height: 80px;
   background-color: #cbb075;
   border-radius: 10px;
+}
+.logoNavBar {
+  height: 75px;
+  margin-right: 35vh;
+}
+#titleNav {
+  margin-right: 35vh;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+  nav {
+    font-size: 18px;
+  }
+  .logoNavBar {
+    height: 45px;
+  }
+  .menuBars {
+    width: 30px;
+    height: 3px;
+  }
+  .menuBars::before,
+  .menuBars::after {
+    width: 30px;
+    height: 3px;
+  }
+  .menuBars::before {
+    transform: translateY(-8px);
+  }
+  .menuBars::after {
+    transform: translateY(8px);
+  }
+  .menuBurger {
+    margin-right: 10px;
+  }
 }
