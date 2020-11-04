@@ -45,8 +45,6 @@ const presList = [
 function Home() {
   return (
     <div className="margin">
-      <h1>Home</h1>
-      <p>Lorem ipsum</p>
       {presList.map((el) => (
         <PresCard
           title={el.title}
