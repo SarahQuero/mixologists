@@ -1,0 +1,35 @@
+.imgHome {
+    background-image: url("../../../public/assets/homeImg.webp");
+    height: 75vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease;
+}
+.introContainer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #19191c;
+    color: #CBB075;
+    height: 45vh;
+    width: 100%;
+}
+.introContainer h1 {
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    font-size: 60px;
+    font-weight: 100;
+}
+.introContainer p {
+    font-family: "Assistant", sans-serif;
+    font-size: 35px;
+    padding: 35px;
+}
+@media only screen and (min-width: 320px) and (max-width : 1185px) {
+    .imgHome {
+        height: 50vh;
+        background-position: center center;
+    }
+}

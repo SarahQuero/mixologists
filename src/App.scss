@@ -8,9 +8,9 @@ marron clair : #DDD1C6
 doré : #CBB075 (uniquement pour le footer)
 */
 
-// Font family
-@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+// // Font family
+// @import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
 
 // Elements principaux de la page
 
@@ -29,6 +29,7 @@ a {
 .margin {
   margin-top: 95px;
 }
+
 @media only screen and (min-width : 320px) and (max-width : 768px) {
   .margin {
     margin-top: 65px;
