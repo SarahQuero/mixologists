@@ -66,16 +66,22 @@ $marron: #846e66;
   border-radius: 8px;
   color: $gold;
   background-color: $black;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .PresCard-card-txt button:hover {
-  color: $white;
+  transition: ease 0.3s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
+.PresCard-card-txt-white button:hover {
+  color: $black;
+  box-shadow: 0px 0px 8px 0px rgba(203, 176, 177, 0.75);
+}
+
+
 .PresCard-card-txt-white button {
   color: $black;
   background-color: $gold;
-  box-shadow: 0px 0px 10px 0px rgba(203, 176, 177, 0.75);
 }
 
 .PresCard-imgCard {

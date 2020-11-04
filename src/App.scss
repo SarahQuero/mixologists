@@ -2,7 +2,6 @@
 Pour le texte : 
 doré : #CBB075
 marron : #846E66
-
 Pour le background : 
 marron foncé : #19191C
 marron clair : #DDD1C6
@@ -14,6 +13,7 @@ doré : #CBB075 (uniquement pour le footer)
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
 
 // Elements principaux de la page
+
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +22,27 @@ doré : #CBB075 (uniquement pour le footer)
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, cursive;
 }
 
-h1 {
-  font-family: "Yesteryear", cursive;
-  color: #cbb075;
-  font-size: 3rem;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.margin {
+  margin-top: 100px;
+}
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+  .margin {
+    margin-top: 70px;
+  }
 }
 
-p {
-  font-family: "Assistant", sans-serif;
-  color: #cbb075;
-  font-size: 1.2rem;
-}
+// h1 {
+//   font-family: "Yesteryear", cursive;
+//   color: #cbb075;
+//   font-size: 3rem;
+// }
+
+// p {
+//   font-family: "Assistant", sans-serif;
+//   color: #cbb075;
+//   font-size: 1.2rem;
+// }
