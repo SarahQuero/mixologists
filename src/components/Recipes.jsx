@@ -10,6 +10,8 @@ const piscoSour = {
   strGlass: "Cocktail glass",
   strInstructions:
     "Vigorously shake and strain contents in a cocktail shaker with ice cubes, then pour into glass and garnish with bitters.[1]",
+  strDrinkThumb:
+    "https://www.thecocktaildb.com/images/media/drink/tsssur1439907622.jpg",
   strIngredient1: "Pisco",
   strIngredient2: "Lemon juice",
   strIngredient3: "Sugar",

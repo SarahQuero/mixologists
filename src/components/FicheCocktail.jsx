@@ -23,6 +23,7 @@ class FicheCocktail extends React.Component {
         <div className="fiche-cocktail-main">
           <FicheCocktailVerso
             cocktailName={cocktail.strDrink}
+            cocktailPicture={cocktail.strDrinkThumb}
             handleClick={handleClick}
             isRotate={isRotate}
           />

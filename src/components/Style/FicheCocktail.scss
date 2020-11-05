@@ -32,6 +32,8 @@ $colorBrownDark: #19191C;
 .fiche-cocktail-container {
   // position: absolute;
   // top: 200px;
+  display: flex;
+  justify-content: center;
   margin-top: 100px;
   width: 100%;
   height: 100vh;
@@ -71,13 +73,30 @@ $colorBrownDark: #19191C;
   color: #19191c;
 }
 
-.fiche-cocktail-title {
+.fiche-cocktail-title.verso {
   text-align: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-gap: 20px;
 }
 
-.fiche-cocktail-title img {
-  width: 40%
+.fiche-cocktail-icone {
+  width: 25%
 }
+
+.fiche-cocktail-image img {
+  width: 100%;
+  border: 2px solid $colorGold;
+  border-radius: 10px;
+  box-shadow: -15px 0px 25px $colorBrownLight;
+}
+
+.fiche-cocktail-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .fiche-cocktail-description {
   display: flex;
   flex-direction: column;

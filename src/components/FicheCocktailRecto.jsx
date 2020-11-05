@@ -19,9 +19,10 @@ function FicheCocktailRecto({
       onClick={handleClick}
       onKeyDown={handleClick}
     >
-      <div className="fiche-cocktail-title">
+      <div className="fiche-cocktail-title recto">
         <h1>{cocktailName}</h1>
         <img
+          className="fiche-cocktail-icone"
           src="https://cdn.discordapp.com/attachments/771314582396207117/773195918655881226/Sans_titre.png"
           alt="icone cocktail"
         />
