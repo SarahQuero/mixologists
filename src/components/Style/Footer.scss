@@ -1,0 +1,77 @@
+// Font family 
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+$fontStyleh1: "Yesteryear", cursive;
+$fontStylep: "Assistant", sans-serif;
+$fontStyleFooter: 'Pacifico', cursive;
+
+// Color definition for text
+$colorGold: #CBB075;
+$colorBrown: #846E66;
+
+//Color definition for background
+$colorBrownLight: #DDD1C6;
+$colorBrownDark: #19191C;
+
+footer {
+  width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colorGold;
+    height: 75px;
+    padding: 20px
+}
+.footer-container img {
+    filter: grayscale(90%);
+}
+
+.icons img{
+    width: 40px;
+    height: 40px;
+}
+
+.contact-us a {
+  font-family: $fontStyleFooter;
+  font-weight: bold; 
+  font-size: 1.5rem;
+}
+
+
+/*#social {
+    display: flex;
+    justify-content: center;
+  }
+  #social img {
+    width: 100%;
+    filter: grayscale(1);
+  }
+  
+  #social img:hover {
+    filter: grayscale(0);
+  }
+  
+  .icons{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  #footerLink {
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+  }
+  .linkFooter {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 3px;
+  }
+  */
