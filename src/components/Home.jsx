@@ -1,6 +1,8 @@
 import React from "react";
 import "./Style/Home.scss";
 import PresCard from "./PresCard";
+import Intro from "./Intro";
+import Team from "./Team";
 import presRecipies from "../../public/images/cock_presCard.jpg";
 import presLab from "../../public/images/presLab.png";
 
@@ -45,6 +47,8 @@ const presList = [
 function Home() {
   return (
     <div className="margin">
+      <Intro />
+      <Team />
       {presList.map((el) => (
         <PresCard
           title={el.title}
