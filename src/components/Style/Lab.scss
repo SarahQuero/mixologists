@@ -1,0 +1,35 @@
+
+.labIngWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labIngWrapper ul {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.labIngWrapper ul li {
+    margin: 20px;
+    border: 2px black solid;
+    padding: 5px;
+    list-style-type: none;
+    user-select: none;
+}
+
+.labIngWrapper ul li:hover {
+    cursor: pointer;
+}
+
+.liclicked {
+    background-color: brown;
+}
+
+.labIngWrapper button {
+    padding: 6px 30px;
+    margin: 50px;
+}
