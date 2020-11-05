@@ -1,10 +1,13 @@
 .imgHome {
     background-image: url("../../../public/assets/homeImg.webp");
-    height: 75vh;
+    height: 90vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .introContainer {
     padding: 50px;
@@ -26,6 +29,17 @@
     font-family: "Assistant", sans-serif;
     font-size: 35px;
     padding: 35px;
+}
+.logoIntro{
+    background-image: url("../../../public/assets/logo2.png");
+    width: 50%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 @media only screen and (min-width: 320px) and (max-width : 1185px) {
     .imgHome {

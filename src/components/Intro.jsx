@@ -5,7 +5,9 @@ function Intro() {
   return (
     <>
       <section>
-        <div className="imgHome" />
+        <div className="imgHome">
+          <div className="logoIntro" />
+        </div>
         <div className="introContainer">
           <h1>Want something to drink?</h1>
           <p>
