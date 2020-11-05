@@ -110,11 +110,7 @@ nav {
   height: 75px;
   margin-left: 20px;
 }
-.titleNavContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   nav {
     font-size: 20px;
@@ -139,9 +135,6 @@ nav {
   }
   .menuBurger {
     margin-right: 10px;
-  }
-  #titleNav {
-    display: none;
   }
   #menu ul {
     font-size: 20px;

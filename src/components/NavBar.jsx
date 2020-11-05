@@ -27,9 +27,6 @@ class NavBar extends React.Component {
               src="https://i.ibb.co/zbPyQZW/logo-experimentalcocktail.png"
               alt="logo"
             />
-            <div className="titleNavContainer">
-              <h2 id="titleNav">Experimental Cocktail Club</h2>
-            </div>
             <div className="menuBurgerContainer">
               <div
                 role="button"
@@ -47,27 +44,39 @@ class NavBar extends React.Component {
         <div id="menu" className={menuOpen ? "menuOpen" : "menuClose"}>
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/" onClick={this.handleClick}>
+                HOME
+              </Link>
             </li>
             <span className="lineMenu" />
             <li>
-              <Link to="/Recipes">RECIPES</Link>
+              <Link to="/Recipes" onClick={this.handleClick}>
+                RECIPES
+              </Link>
             </li>
             <span className="lineMenu" />
             <li>
-              <Link to="/Lab">LAB COCKTAIL</Link>
+              <Link to="/Lab" onClick={this.handleClick}>
+                LAB COCKTAIL
+              </Link>
             </li>
             <span className="lineMenu" />
             <li>
-              <Link to="/World">AROUND THE WORLD</Link>
+              <Link to="/World" onClick={this.handleClick}>
+                AROUND THE WORLD
+              </Link>
             </li>
             <span className="lineMenu" />
             <li>
-              <Link to="/Box">OUR BOXES</Link>
+              <Link to="/Box" onClick={this.handleClick}>
+                OUR BOXES
+              </Link>
             </li>
             <span className="lineMenu" />
             <li>
-              <Link to="/Contact">CONTACT</Link>
+              <Link to="/Contact" onClick={this.handleClick}>
+                CONTACT
+              </Link>
             </li>
           </ul>
         </div>
