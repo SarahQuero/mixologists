@@ -1,5 +1,8 @@
 import React from "react";
 import "./Style/Team.scss";
+import Jeremy from "../../public/assets/Jérémy.jpg";
+import Sarah from "../../public/assets/Sarah.jpg";
+import Florent from "../../public/assets/Florent.jpg";
 
 function Team() {
   return (
@@ -14,9 +17,24 @@ function Team() {
             deserunt rerum quos a.
           </p>
           <div className="memberContainer">
-            <div className="memberImg" />
-            <div className="memberImg" />
-            <div className="memberImg" />
+            <div
+              className="memberImg"
+              style={{
+                backgroundImage: `url(${Jeremy})`,
+              }}
+            />
+            <div
+              className="memberImg"
+              style={{
+                backgroundImage: `url(${Sarah})`,
+              }}
+            />
+            <div
+              className="memberImg"
+              style={{
+                backgroundImage: `url(${Florent})`,
+              }}
+            />
           </div>
         </div>
       </section>
