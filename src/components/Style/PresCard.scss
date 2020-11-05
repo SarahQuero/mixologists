@@ -1,0 +1,111 @@
+$black: #19191c;
+$gold: #cbb075;
+$white: #ddd1c6;
+$marron: #846e66;
+
+.PresCard {
+  background-color: $black;
+  color: $gold;
+  padding: 30px;
+}
+
+.PresCard h2,
+.PresCard-desc-main {
+  text-align: center;
+}
+
+.PresCard-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.PresCard .inversePres {
+  flex-direction: row-reverse;
+}
+
+.PresCard-card-txt {
+  box-sizing: border-box;
+  background-color: $white;
+  color: $marron;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.PresCard-white {
+  background-color: $white;
+  color: $marron;
+}
+
+.PresCard-card-txt-white {
+  background-color: $black;
+  color: $gold;
+}
+
+.PresCard-card-txt h3 {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.PresCard-card-txt button {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 30px;
+  padding: 15px 50px;
+  border-radius: 8px;
+  color: $gold;
+  background-color: $black;
+}
+
+.PresCard-card-txt button:hover {
+  transition: ease 0.3s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.PresCard-card-txt-white button:hover {
+  color: $black;
+  box-shadow: 0px 0px 8px 0px rgba(203, 176, 177, 0.75);
+}
+
+
+.PresCard-card-txt-white button {
+  color: $black;
+  background-color: $gold;
+}
+
+.PresCard-imgCard {
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.PresCard-imgCard img {
+  width: 500px;
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  .PresCard-wrapper {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .PresCard-imgCard {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
