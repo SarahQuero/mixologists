@@ -5,6 +5,7 @@ import Intro from "./Intro";
 import Team from "./Team";
 import presRecipies from "../../public/images/cock_presCard.jpg";
 import presLab from "../../public/images/presLab.png";
+import PresWorld from "./PresWorld";
 
 const presList = [
   {
@@ -62,6 +63,7 @@ function Home() {
           path={el.path}
         />
       ))}
+      <PresWorld />
     </div>
   );
 }
