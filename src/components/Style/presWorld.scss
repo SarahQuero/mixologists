@@ -1,0 +1,59 @@
+$colorBrownLight: #DDD1C6;
+$colorBrownDark: #19191C;
+
+$colorGold: #CBB075;
+$colorBrown: #846E66;
+
+.presWorldContainer {
+    height: 130vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $colorBrownDark;
+    color: $colorGold;
+    padding: 50px;
+}
+.presWorldContainer h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    font-weight: 100;
+}
+.presWorldContainer p {
+    font-family: "Assistant", sans-serif;
+    font-size: 35px;
+    padding: 35px;
+}
+.presWorldImgContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.presWorldImg {
+    background-image: url("../../../public/assets/globe.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    width: 1500px;
+    border-radius: 10px;
+}
+.presWorldButtonContainer {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.presWorldButton {
+    padding: 30px 60px 30px 60px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Assistant", sans-serif;
+    font-size: 35px;
+    background-color: $colorGold;
+    color: $colorBrownDark;
+    outline-width: 0;
+    cursor: pointer;
+}
