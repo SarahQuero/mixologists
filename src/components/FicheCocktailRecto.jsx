@@ -28,18 +28,21 @@ function FicheCocktailRecto({
         />
       </div>
       <div className="fiche-cocktail-description">
+        <h2>Cocktail Description</h2>
         <p>
           {" "}
-          Le pisco sour est un cocktail t'ypique de la cuisine sud-américaine à
-          base de pisco et de jus de citron vert. Le nom de cette boisson
-          provient à la fois du pisco, l'alcool utilisé et sour, mot anglais en
-          référence à lacidité du jus de citron.
+          A pisco sour is an alcoholic cocktail of Peruvian origin that is
+          typical of the cuisines from Peru and Chile. The drink's name comes
+          from pisco, which is its base liquor, and the cocktail term sour, in
+          reference to sour citrus juice and sweetener components. The Peruvian
+          pisco sour uses Peruvian pisco as the base liquor and adds freshly
+          squeezed lime juice, simple syrup, ice, egg white, and Angostura
+          bitters.
         </p>
       </div>
       <div className="fiche-cocktail-recipe">
-        <p>
-          Recipe : <br /> {instructions}
-        </p>
+        <h2>Recipe</h2>
+        <p>{instructions}</p>
         <ul>
           <li>
             <input type="checkbox" />
