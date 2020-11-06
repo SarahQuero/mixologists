@@ -1,0 +1,30 @@
+$colorBrownLight: #ddd1c6;
+$colorBrown: #846e66;
+
+.presBoxesContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $colorBrownLight;
+  color: $colorBrown;
+  padding: 50px;
+}
+.presBoxesContainer h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: "Yesteryear", cursive;
+  font-weight: 100;
+}
+.presBoxesContainer p {
+  font-family: "Assistant", sans-serif;
+  font-size: 35px;
+  padding: 35px;
+}
+.presBoxesCardContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 150px;
+  padding-left: 60px;
+
+}

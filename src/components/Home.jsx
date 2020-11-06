@@ -6,6 +6,7 @@ import Team from "./Team";
 import presRecipies from "../../public/images/cock_presCard.jpg";
 import presLab from "../../public/images/presLab.png";
 import PresWorld from "./PresWorld";
+import PresBoxes from "./PresBoxes";
 
 const presList = [
   {
@@ -13,11 +14,7 @@ const presList = [
     descMain: `Deserunt ad ea fugiat officia consectetur exercitation excepteur dolore
     excepteur cillum labore quis. Excepteur est sit voluptate laboris. Laborum
     commodo laborum voluptate eiusmod officia sunt. Nisi anim deserunt dolore
-    magna reprehenderit commodo Lorem cupidatat mollit esse non. Esse velit
-    ipsum anim ad deserunt elit. Officia exercitation aliquip et mollit
-    consectetur ipsum aute ullamco non voluptate reprehenderit quis. Consequat
-    do voluptate eiusmod commodo aliquip exercitation pariatur veniam sint
-    nisi cillum anim deserunt.`,
+    magna. `,
     imgRight: true,
     cardTitle: "Discover our cocktails",
     descCard: `Sint ullamco culpa nisi amet enim ut deserunt irure occaecat Lorem
@@ -31,7 +28,10 @@ const presList = [
   },
   {
     title: "Lab cocktail",
-    descMain: "",
+    descMain: `Deserunt ad ea fugiat officia consectetur exercitation excepteur dolore
+    excepteur cillum labore quis. Excepteur est sit voluptate laboris. Laborum
+    commodo laborum voluptate eiusmod officia sunt. Nisi anim deserunt dolore
+    magna.`,
     imgRight: false,
     cardTitle: "About the lab cocktail",
     descCard: `Sint ullamco culpa nisi amet enim ut deserunt irure occaecat Lorem
@@ -64,6 +64,7 @@ function Home() {
         />
       ))}
       <PresWorld />
+      <PresBoxes />
     </div>
   );
 }
