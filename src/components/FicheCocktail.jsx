@@ -42,7 +42,7 @@ class FicheCocktail extends React.Component {
 }
 
 FicheCocktail.propTypes = {
-  cocktail: PropTypes.string.isRequired,
+  cocktail: PropTypes.object.isRequired,
 };
 
 export default FicheCocktail;

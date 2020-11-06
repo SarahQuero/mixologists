@@ -30,9 +30,11 @@ const PresCard = ({
         <div className="PresCard-card-desc" key={imgRight}>
           {descCard}
         </div>
-        <Link to={path}>
-          <button type="button"> {button} </button>
-        </Link>
+        <div className="presButtonContainer">
+          <Link to={path}>
+            <button type="button"> {button} </button>
+          </Link>
+        </div>
       </div>
       <div className="PresCard-imgCard">
         <img src={img} alt="cocktails" />
