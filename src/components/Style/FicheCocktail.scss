@@ -1,4 +1,4 @@
-// Font family 
+// Font family
 @import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
 
@@ -6,12 +6,12 @@ $fontStyleh1: "Yesteryear", cursive;
 $fontStylep: "Assistant", sans-serif;
 
 // Color definition for text
-$colorGold: #CBB075;
-$colorBrown: #846E66;
+$colorGold: #cbb075;
+$colorBrown: #846e66;
 
 //Color definition for background
-$colorBrownLight: #DDD1C6;
-$colorBrownDark: #19191C;
+$colorBrownLight: #ddd1c6;
+$colorBrownDark: #19191c;
 
 .fiche-cocktail {
   display: flex;
@@ -29,19 +29,23 @@ $colorBrownDark: #19191C;
   margin: 10px;
   padding: 20px;
 }
-.fiche-cocktail-container {
-  // position: absolute;
-  // top: 200px;
-  margin-top: 100px;
-  width: 100%;
-  height: 100vh;
-}
+
 .fiche-cocktail-main {
   position: relative;
-  width: 300px;
-  height: 500px;
-
+  width: 200px;
+  height: 400px;
 }
+.fiche-cocktail-title h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: $colorGold;
+  font-family: $fontStyleh1;
+}
+.fiche-cocktail p {
+  text-align: justify;
+  color: #19191c;
+}
+  //Verso (Face)
 .fiche-cocktail.verso {
   position: absolute;
   top: 50%;
@@ -50,6 +54,13 @@ $colorBrownDark: #19191C;
   z-index: 10;
   transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+.fiche-cocktail-title.verso {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-gap: 20px;
+}
+//Recto (Derrière)
 .fiche-cocktail.recto {
   position: absolute;
   top: 50%;
@@ -57,27 +68,28 @@ $colorBrownDark: #19191C;
   transform: translate(-50%, -50%) rotateY(180deg);
   transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
-
-.fiche-cocktail-title h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: $colorGold;
-  font-family: $fontStyleh1;
+.fiche-cocktail-title.recto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fiche-cocktail-icone {
+  width: 25%;
 }
 
-.fiche-cocktail p {
-  text-align: justify;
-  color: #19191c;
+.fiche-cocktail-image img {
+  width: 100%;
+  border: 2px solid $colorGold;
+  border-radius: 10px;
+  box-shadow: -15px 0px 25px $colorBrownLight;
 }
 
-.fiche-cocktail-title {
-  text-align: center;
+.fiche-cocktail-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fiche-cocktail-title img {
-  width: 40%
-}
 .fiche-cocktail-description {
   display: flex;
   flex-direction: column;
@@ -89,6 +101,12 @@ $colorBrownDark: #19191C;
 .fiche-cocktail-recipe p {
   font-family: $fontStylep;
   font-size: 0.8em;
+}
+.fiche-cocktail-recipe h2, .fiche-cocktail-description h2 {
+  font-family: $fontStyleh1;
+  color: $colorGold;
+  text-align: center;
+  font-size: 0,9em;
 }
 .fiche-cocktail-recipe ul {
   font-family: $fontStylep;
