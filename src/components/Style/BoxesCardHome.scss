@@ -1,0 +1,40 @@
+$colorBrownLight: #DDD1C6;
+$colorBrownDark: #19191C;
+
+$colorGold: #CBB075;
+$colorBrown: #846E66;
+
+.presBoxesCard {
+    background-color: #19191C;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.presBoxesCard h3 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    font-weight: 100;
+    color: #CBB075;
+}
+.presBoxesImg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+}
+.boxesButtonAcces {
+    margin: 60px;
+    padding: 30px 100px 30px 100px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Assistant", sans-serif;
+    font-size: 35px;
+    background-color: $colorGold;
+    color: $colorBrownDark;
+    outline-width: 0;
+    cursor: pointer;
+}
