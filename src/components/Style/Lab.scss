@@ -7,10 +7,7 @@
 
 .labIngWrapper ul {
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     flex-wrap: wrap;
-
 }
 
 .labIngWrapper ul li {
@@ -32,4 +29,25 @@
 .labIngWrapper button {
     padding: 6px 30px;
     margin: 50px;
+}
+
+
+
+.verreWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.verreWrapper img {
+    width: 25%;
+}
+
+.verreColorWrapper {
+    position: absolute;
+    bottom: 17px;
+    width: 25%;
 }
