@@ -19,30 +19,30 @@ class FicheCocktail extends React.Component {
     const { isRotate } = this.state;
     const { handleClick } = this;
     return (
-      <div className="fiche-cocktail-container">
-        <div className="fiche-cocktail-main">
-          <FicheCocktailVerso
-            cocktailName={cocktail.strDrink}
-            handleClick={handleClick}
-            isRotate={isRotate}
-          />
-          <FicheCocktailRecto
-            cocktailName={cocktail.strDrink}
-            instructions={cocktail.strInstructions}
-            ingredient1={cocktail.strIngredient1}
-            ingredient2={cocktail.strIngredient2}
-            ingredient3={cocktail.strIngredient3}
-            handleClick={handleClick}
-            isRotate={isRotate}
-          />
-        </div>
-      </div>
+      <>
+        <FicheCocktailVerso
+          cocktailName={cocktail.strDrink}
+          cocktailPicture={cocktail.strDrinkThumb}
+          handleClick={handleClick}
+          isRotate={isRotate}
+        />
+        <FicheCocktailRecto
+          cocktailName={cocktail.strDrink}
+          instructions={cocktail.strInstructions}
+          ingredient1={cocktail.strIngredient1}
+          ingredient2={cocktail.strIngredient2}
+          ingredient3={cocktail.strIngredient3}
+          handleClick={handleClick}
+          isRotate={isRotate}
+        />
+      </>
+      // </div>
     );
   }
 }
 
 FicheCocktail.propTypes = {
-  cocktail: PropTypes.string.isRequired,
+  cocktail: PropTypes.object.isRequired,
 };
 
 export default FicheCocktail;

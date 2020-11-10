@@ -2,7 +2,12 @@ import React from "react";
 import "./Style/FicheCocktail.scss";
 import PropTypes from "prop-types";
 
-function FicheCocktailVerso({ cocktailName, handleClick, isRotate }) {
+function FicheCocktailVerso({
+  cocktailName,
+  cocktailPicture,
+  handleClick,
+  isRotate,
+}) {
   return (
     <div
       role="button"
@@ -11,12 +16,13 @@ function FicheCocktailVerso({ cocktailName, handleClick, isRotate }) {
       onClick={handleClick}
       onKeyDown={handleClick}
     >
-      <div className="fiche-cocktail-title">
-        <h1>{cocktailName}</h1>
-        <img
-          src="https://cdn.discordapp.com/attachments/771314582396207117/773195918655881226/Sans_titre.png"
-          alt="icone cocktail"
-        />
+      <div className="fiche-cocktail-title verso">
+        <div className="fiche-cocktail-image">
+          <img src={cocktailPicture} alt="icone cocktail" />
+        </div>
+        <div className="fiche-cocktail-name">
+          <h1>{cocktailName}</h1>
+        </div>
       </div>
     </div>
   );
@@ -24,6 +30,7 @@ function FicheCocktailVerso({ cocktailName, handleClick, isRotate }) {
 
 FicheCocktailVerso.propTypes = {
   cocktailName: PropTypes.string.isRequired,
+  cocktailPicture: PropTypes.string.isRequired,
   isRotate: PropTypes.bool,
   handleClick: PropTypes.func.isRequired,
 };
