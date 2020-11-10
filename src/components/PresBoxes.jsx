@@ -38,26 +38,24 @@ class PresBoxes extends React.Component {
     console.log(cocktailBox);
     return (
       <>
-        <section>
-          <div className="presBoxesContainer">
-            <h1>Our Boxes</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              deleniti ducimus possimus ad dolore iusto! Repudiandae atque eius
-              quaerat neque itaque voluptatum reiciendis qui rem, repellat vero
-              totam. Ab, adipisci!
-            </p>
-            <div className="presBoxesCardContainer">
-              {cocktailBox.map((el) => (
-                <BoxesCardHome
-                  key={el.idDrink}
-                  titleCocktail={el.strDrink}
-                  imgCocktail={el.strDrinkThumb}
-                />
-              ))}
-            </div>
+        <div className="presBoxesContainer">
+          <h1>Our Boxes</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+            deleniti ducimus possimus ad dolore iusto! Repudiandae atque eius
+            quaerat neque itaque voluptatum reiciendis qui rem, repellat vero
+            totam. Ab, adipisci!
+          </p>
+          <div className="presBoxesCardContainer">
+            {cocktailBox.map((el) => (
+              <BoxesCardHome
+                key={el.idDrink}
+                titleCocktail={el.strDrink}
+                imgCocktail={el.strDrinkThumb}
+              />
+            ))}
           </div>
-        </section>
+        </div>
       </>
     );
   }

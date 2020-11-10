@@ -1,0 +1,61 @@
+.carouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    outline: 0;
+    background-color: #ddd1c6;
+}
+.carouselCocktailContainer {
+    background-color: #ddd1c6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev, .next {
+    cursor: pointer;
+    width: auto;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    color:  #cbb075;
+    margin: 50px;
+    outline: 0;
+}
+.slide {
+    animation: slide 1.3s ease;
+}
+.cocktailCardContainer {
+    background-color: #ddd1c6;
+    position: relative;
+    width: 350px;
+    min-width: 250px;
+    height: 500px;
+    display: none;
+    outline: 0;
+
+}
+.buttonRandom {
+    padding: 20px 25px 20px 25px;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+    background-color: #cbb075;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: "Assistant", sans-serif;
+    cursor: pointer;
+}
+@keyframes slide {
+    from {
+        transform: translateX(-200px);
+        background-color: transparent;
+    } to {
+        transform: translate(0px);
+        background-color: white;
+    }
+}
+
