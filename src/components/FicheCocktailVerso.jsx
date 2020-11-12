@@ -17,9 +17,10 @@ function FicheCocktailVerso({
       onKeyDown={handleClick}
     >
       <div className="fiche-cocktail-title verso">
-        <div className="fiche-cocktail-image">
-          <img src={cocktailPicture} alt="icone cocktail" />
-        </div>
+        <div
+          className="fiche-cocktail-image"
+          style={{ backgroundImage: `URL(${cocktailPicture})` }}
+        />
         <div className="fiche-cocktail-name">
           <h1>{cocktailName}</h1>
         </div>

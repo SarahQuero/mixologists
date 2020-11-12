@@ -1,5 +1,6 @@
 import React from "react";
 import "./Style/Lab.scss";
+import CarouselLab from "./CarouselLab";
 import verreVide from "../../public/images/verre_vide.png";
 
 class Lab extends React.Component {
@@ -134,6 +135,7 @@ class Lab extends React.Component {
     const { cocktailIng } = state;
     return (
       <div className="margin labWrapper">
+        <CarouselLab />
         <h1> Follow the recipes</h1>
         <div className="labIngWrapper">
           <h2>Ingredients</h2>
