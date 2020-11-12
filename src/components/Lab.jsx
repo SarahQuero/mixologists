@@ -134,8 +134,8 @@ class Lab extends React.Component {
     const { cocktailIng } = state;
     return (
       <div className="margin labWrapper">
-        <h1> Follow the recipes</h1>
         <div className="labIngWrapper">
+          <h1> Follow the recipes</h1>
           <h2>Ingredients</h2>
           <ul>
             {cocktailIng.map((el, id) => (
@@ -155,6 +155,7 @@ class Lab extends React.Component {
             Mix
           </button>
         </div>
+        <div className="verreSpacer" />
         <div className="verreWrapper">
           <img src={verreVide} alt="Verre vide" />
           <div className="verreColorWrapper">
