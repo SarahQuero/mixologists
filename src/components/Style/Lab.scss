@@ -1,21 +1,50 @@
+$black: #19191c;
+$gold: #cbb075;
+$white: #ddd1c6;
+$marron: #846e66;
+
+.labWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .labIngWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $black;
+    color: $gold;
+}
+
+.labIngWrapper h1 {
+  font-family: "Yesteryear", cursive;
+  font-size: 60px;
+}
+
+.labIngWrapper h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: 35px;
 }
 
 .labIngWrapper ul {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .labIngWrapper ul li {
+    font-family: "Assistant", sans-serif;
+    font-size: 22px;
     margin: 20px;
-    border: 2px black solid;
+    border: 2px $gold solid;
     padding: 5px;
     list-style-type: none;
     user-select: none;
+    transition: ease 0.5s;
+    border-radius: 10px;
+    outline: 0;
+
 }
 
 .labIngWrapper ul li:hover {
@@ -23,15 +52,27 @@
 }
 
 .liclicked {
-    background-color: brown;
+    transition: ease 0.5s;
+    background-color: $gold;
+    color: $black;
 }
 
 .labIngWrapper button {
-    padding: 6px 30px;
-    margin: 50px;
+    font-family: "Assistant", sans-serif;
+    padding: 6px 50px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    background-color: $gold;
+    color: $black;
+    border: 0;
+    border-radius: 10px;
 }
 
-
+.verreSpacer {
+    height: 30px;
+    width: 100%;
+    background-color: $white;
+}
 
 .verreWrapper {
     position: relative;
@@ -39,7 +80,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    background-color: $white;
+    overflow: hidden;
 }
 
 .verreWrapper img {
@@ -48,6 +91,39 @@
 
 .verreColorWrapper {
     position: absolute;
-    bottom: 17px;
+    bottom: 35px;
     width: 25%;
 }
+
+.verreColorWrapper div {
+    font-family: "Assistant", sans-serif;
+    text-align: center;
+    padding: 2px 0;
+    color: $black;
+}
+
+
+@media (min-width: 900px) {
+    .labWrapper {
+      flex-direction: row;
+      padding: 50px 0;
+    }
+    .verreSpacer {
+        display: none;
+    }
+    .labIngWrapper {
+        width: 100%;
+    }
+    .verreWrapper img {
+        width: 45%;
+    }
+    .verreColorWrapper {
+        position: absolute;
+        bottom: 42px;
+        width: 45%;
+    }
+    .verreWrapper img {
+        position: absolute;
+        bottom: 25px;
+    }
+  }
