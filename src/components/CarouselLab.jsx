@@ -17,8 +17,9 @@ class CarouselLab extends React.Component {
     this.fetchApi();
   }
 
-  plusSlide = (n) => {
+  plusSlide = (u) => {
     const { slideIndex, cocktailList } = this.state;
+    let n = u;
     n += slideIndex;
     if (n > cocktailList.length - 1) {
       n = 0;
@@ -47,6 +48,7 @@ class CarouselLab extends React.Component {
   render() {
     const { cocktailList, slideIndex } = this.state;
     const { fetchApi, plusSlide } = this;
+    // console.log(cocktailList[0].idDrink);
     return (
       <div className="carouselContainer">
         <button type="button" onClick={fetchApi} className="buttonRandom">
@@ -64,10 +66,11 @@ class CarouselLab extends React.Component {
           </span>
           {cocktailList.map((el, index) => (
             <div
+              key={el.idDrink}
               className="cocktailCardContainer"
               style={{ display: index === slideIndex ? "block" : "none" }}
             >
-              <FicheCocktail key={index} cocktail={el} />
+              <FicheCocktail cocktail={el} />
             </div>
           ))}
           <span
