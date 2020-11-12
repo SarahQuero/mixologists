@@ -1,5 +1,6 @@
 import React from "react";
 import "./Style/Lab.scss";
+import CarouselLab from "./CarouselLab";
 import verreVide from "../../public/images/verre_vide.png";
 
 class Lab extends React.Component {
@@ -133,39 +134,42 @@ class Lab extends React.Component {
     const { state, setClickIng, checkMix } = this;
     const { cocktailIng } = state;
     return (
-      <div className="margin labWrapper">
-        <div className="labIngWrapper">
-          <h1> Follow the recipes</h1>
-          <h2>Ingredients</h2>
-          <ul>
-            {cocktailIng.map((el, id) => (
-              <li
-                className={el.checked ? "liclicked" : null}
-                key={`ingId${el.name}`}
-                onClick={() => setClickIng(id)}
-                role="treeitem"
-                tabIndex="-1"
-                onKeyDown={() => setClickIng(id)}
-              >
-                {el.name}
-              </li>
-            ))}
-          </ul>
-          <button type="button" onClick={checkMix}>
-            Mix
-          </button>
-        </div>
-        <div className="verreSpacer" />
-        <div className="verreWrapper">
-          <img src={verreVide} alt="Verre vide" />
-          <div className="verreColorWrapper">
-            {cocktailIng
-              .filter((el) => el.checked)
-              .map((el) => (
-                <div key={`remplirCok${el.name}`} style={el.color}>
+      <div className="margin">
+        <CarouselLab />
+        <div className="labWrapper">
+          <div className="labIngWrapper">
+            <h1> Follow the recipes</h1>
+            <h2>Ingredients</h2>
+            <ul>
+              {cocktailIng.map((el, id) => (
+                <li
+                  className={el.checked ? "liclicked" : null}
+                  key={`ingId${el.name}`}
+                  onClick={() => setClickIng(id)}
+                  role="treeitem"
+                  tabIndex="-1"
+                  onKeyDown={() => setClickIng(id)}
+                >
                   {el.name}
-                </div>
+                </li>
               ))}
+            </ul>
+            <button type="button" onClick={checkMix}>
+              Mix
+            </button>
+          </div>
+          <div className="verreSpacer" />
+          <div className="verreWrapper">
+            <img src={verreVide} alt="Verre vide" />
+            <div className="verreColorWrapper">
+              {cocktailIng
+                .filter((el) => el.checked)
+                .map((el) => (
+                  <div key={`remplirCok${el.name}`} style={el.color}>
+                    {el.name}
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>

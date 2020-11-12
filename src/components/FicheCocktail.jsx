@@ -42,7 +42,16 @@ class FicheCocktail extends React.Component {
 }
 
 FicheCocktail.propTypes = {
-  cocktail: PropTypes.object.isRequired,
+  cocktail: PropTypes.shape({
+    strDrink: PropTypes.string.isRequired,
+    strDrinkThumb: PropTypes.string.isRequired,
+    strInstructions: PropTypes.string.isRequired,
+    strIngredient1: PropTypes.string.isRequired,
+    strIngredient2: PropTypes.string.isRequired,
+    strIngredient3: PropTypes.string.isRequired,
+    handleClick: PropTypes.func.isRequired,
+    isRotate: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
 export default FicheCocktail;
