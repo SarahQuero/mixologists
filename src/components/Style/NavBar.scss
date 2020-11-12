@@ -74,6 +74,7 @@ nav {
   margin-top: 100px;
   color: white;
   font-size: 30px;
+  font-family: "Assistant", sans-serif;
 }
 #menu ul li {
   margin: 20px 0 10px;
@@ -88,7 +89,7 @@ nav {
   background-color: hsla(0, 0%, 11%, 0.9);
 }
 .menuClose {
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   transition: 0.8s ease;
 }
 .menuOpen {

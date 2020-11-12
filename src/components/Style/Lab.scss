@@ -1,0 +1,53 @@
+
+.labIngWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labIngWrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labIngWrapper ul li {
+    margin: 20px;
+    border: 2px black solid;
+    padding: 5px;
+    list-style-type: none;
+    user-select: none;
+}
+
+.labIngWrapper ul li:hover {
+    cursor: pointer;
+}
+
+.liclicked {
+    background-color: brown;
+}
+
+.labIngWrapper button {
+    padding: 6px 30px;
+    margin: 50px;
+}
+
+
+
+.verreWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.verreWrapper img {
+    width: 25%;
+}
+
+.verreColorWrapper {
+    position: absolute;
+    bottom: 17px;
+    width: 25%;
+}
