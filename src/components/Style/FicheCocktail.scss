@@ -28,6 +28,9 @@ $colorBrownDark: #19191c;
   padding: 10px;
   margin: 10px;
   padding: 20px;
+  overflow: hidden;
+  outline: 0;
+
 }
 
 .fiche-cocktail-main {
@@ -37,7 +40,7 @@ $colorBrownDark: #19191c;
 }
 .fiche-cocktail-title h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   color: $colorGold;
   font-family: $fontStyleh1;
 }
@@ -77,8 +80,12 @@ $colorBrownDark: #19191c;
   width: 25%;
 }
 
-.fiche-cocktail-image img {
-  width: 100%;
+.fiche-cocktail-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
   border: 2px solid $colorGold;
   border-radius: 10px;
   box-shadow: -15px 0px 25px $colorBrownLight;
