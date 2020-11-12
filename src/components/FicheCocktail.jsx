@@ -36,7 +36,6 @@ class FicheCocktail extends React.Component {
           isRotate={isRotate}
         />
       </>
-      // </div>
     );
   }
 }
