@@ -2,6 +2,7 @@ import React from "react";
 import "./Style/Lab.scss";
 import CarouselLab from "./CarouselLab";
 import verreVide from "../../public/images/verre_vide.png";
+import LabResult from "./LabResult";
 
 class Lab extends React.Component {
   randomColorList = [
@@ -18,6 +19,7 @@ class Lab extends React.Component {
     this.state = {
       cocktailList: [],
       cocktailIng: [],
+      result: null,
     };
   }
 
@@ -138,7 +140,24 @@ class Lab extends React.Component {
           correct = false;
         }
       });
-    console.log(correct);
+    this.setState({ result: correct });
+  };
+
+  displayResult = () => {
+    console.log("1");
+    this.setState({ result: null });
+    const { cocktailIng } = this.state;
+    // const resCocktailIng = cocktailIng.map((el) => {
+    //   el.checked = false;
+    //   return el;
+    // });
+    const resCocktailIng = [];
+    for (let i = 0; i < cocktailIng.length; i += 1) {
+      resCocktailIng[i] = cocktailIng[i];
+      resCocktailIng[i].checked = false;
+    }
+
+    this.setState({ cocktailIng: resCocktailIng });
   };
 
   randomColor = () => {
@@ -150,8 +169,15 @@ class Lab extends React.Component {
   };
 
   render() {
-    const { state, setClickIng, checkMix, getCocktail, changeCocktail } = this;
-    const { cocktailIng, cocktailList } = state;
+    const {
+      state,
+      setClickIng,
+      checkMix,
+      getCocktail,
+      changeCocktail,
+      displayResult,
+    } = this;
+    const { cocktailIng, cocktailList, result } = state;
     return (
       <div className="margin">
         <CarouselLab
@@ -195,6 +221,22 @@ class Lab extends React.Component {
             </div>
           </div>
         </div>
+        {result === true ? (
+          <div>
+            <LabResult
+              message="Congratulations! You are now ready to make your own cocktail! "
+              displayResult={displayResult}
+            />
+          </div>
+        ) : null}
+        {result === false ? (
+          <div>
+            <LabResult
+              message="You almost had the solution... Let's try again !"
+              displayResult={displayResult}
+            />
+          </div>
+        ) : null}
       </div>
     );
   }

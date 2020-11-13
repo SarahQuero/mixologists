@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import FicheCocktail from "./FicheCocktail";
@@ -85,4 +86,5 @@ CarouselLab.propTypes = {
   getCocktail: PropTypes.func.isRequired,
   chooseCocktail: PropTypes.func.isRequired,
 };
+
 export default CarouselLab;

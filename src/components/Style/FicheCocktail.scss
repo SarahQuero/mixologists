@@ -97,31 +97,31 @@ $colorBrownDark: #19191c;
   align-items: center;
 }
 
-.fiche-cocktail-description {
+.fiche-cocktail-recipe {
   display: flex;
   flex-direction: column;
-}
-.fiche-cocktail-description p {
-  font-family: $fontStylep;
-  font-size: 0.8em;
 }
 .fiche-cocktail-recipe p {
   font-family: $fontStylep;
   font-size: 0.8em;
 }
-.fiche-cocktail-recipe h2, .fiche-cocktail-description h2 {
+.fiche-cocktail-ingredient p {
+  font-family: $fontStylep;
+  font-size: 1em;
+}
+.fiche-cocktail-ingredient h2, .fiche-cocktail-recipe h2 {
   font-family: $fontStyleh1;
   color: $colorGold;
   text-align: center;
-  font-size: 0,9em;
+  font-size: 2em;
 }
-.fiche-cocktail-recipe ul {
+.fiche-cocktail-ingredient ul {
   font-family: $fontStylep;
-  font-size: 0.8em;
+  font-size: 1em;
   margin: 0;
   list-style: none;
 }
-.fiche-cocktail-recipe li {
+.fiche-cocktail-ingredient li {
   font-family: $fontStylep;
   font-size: 0.8em;
 }

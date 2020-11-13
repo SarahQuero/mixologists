@@ -32,6 +32,11 @@ class FicheCocktail extends React.Component {
           ingredient1={cocktail.strIngredient1}
           ingredient2={cocktail.strIngredient2}
           ingredient3={cocktail.strIngredient3}
+          ingredient4={cocktail.strIngredient4}
+          strMeasure1={cocktail.strMeasure1}
+          strMeasure2={cocktail.strMeasure2}
+          strMeasure3={cocktail.strMeasure3}
+          strMeasure4={cocktail.strMeasure4}
           handleClick={handleClick}
           isRotate={isRotate}
         />
@@ -48,6 +53,11 @@ FicheCocktail.propTypes = {
     strIngredient1: PropTypes.string.isRequired,
     strIngredient2: PropTypes.string.isRequired,
     strIngredient3: PropTypes.string.isRequired,
+    strIngredient4: PropTypes.string.isRequired,
+    strMeasure1: PropTypes.string.isRequired,
+    strMeasure2: PropTypes.string.isRequired,
+    strMeasure3: PropTypes.string.isRequired,
+    strMeasure4: PropTypes.string.isRequired,
   }).isRequired,
 };
 
