@@ -5,10 +5,8 @@
     flex-direction: column;
     height: 100vh;
     outline: 0;
-    background-color: #ddd1c6;
 }
 .carouselCocktailContainer {
-    background-color: #ddd1c6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +27,6 @@
     animation: slide 1.3s ease;
 }
 .cocktailCardContainer {
-    background-color: #ddd1c6;
     position: relative;
     width: 350px;
     min-width: 250px;
@@ -58,4 +55,14 @@
         background-color: white;
     }
 }
-
+.chooseButton {
+    padding: 20px 25px 20px 25px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #cbb075;
+    font-size: 25px;
+    font-family: "Assistant", sans-serif;
+    cursor: pointer;
+    outline: 0;
+    margin: 40px 0 0 50px;
+}

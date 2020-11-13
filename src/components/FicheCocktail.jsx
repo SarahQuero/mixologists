@@ -58,8 +58,6 @@ FicheCocktail.propTypes = {
     strMeasure2: PropTypes.string.isRequired,
     strMeasure3: PropTypes.string.isRequired,
     strMeasure4: PropTypes.string.isRequired,
-    handleClick: PropTypes.func.isRequired,
-    isRotate: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

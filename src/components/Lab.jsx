@@ -17,13 +17,14 @@ class Lab extends React.Component {
   constructor() {
     super();
     this.state = {
+      cocktailList: [],
       cocktailIng: [],
       result: null,
     };
   }
 
   componentDidMount() {
-    this.getCocktail("mojito");
+    this.getCocktail();
   }
 
   myIncludes = (array, string) => {
@@ -81,7 +82,10 @@ class Lab extends React.Component {
   getAllIngre = (array) => {
     const newAray = [];
     for (let i = 1; i < 16; i += 1) {
-      if (array[`strIngredient${i}`] === null) {
+      if (
+        array[`strIngredient${i}`] === null ||
+        array[`strIngredient${i}`] === ""
+      ) {
         break;
       }
       newAray.push({
@@ -92,15 +96,30 @@ class Lab extends React.Component {
     return this.insertRandomIng(newAray);
   };
 
-  getCocktail = (name) => {
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
+  getCocktail = () => {
+    const array = [];
+    fetch(
+      `https://www.thecocktaildb.com/api/json/v2/9973533/randomselection.php`
+    )
       .then((data) => data.json())
       .then((cocktailReturn) => {
         const cocktail = cocktailReturn.drinks[0];
+        for (let i = 0; i < 4; i += 1) {
+          array.push(cocktailReturn.drinks[i]);
+        }
         this.setState({
+          cocktailList: array,
           cocktailIng: this.getAllIngre(cocktail),
         });
       });
+  };
+
+  changeCocktail = (n) => {
+    const { cocktailList } = this.state;
+    const cocktail = cocktailList[n];
+    this.setState({
+      cocktailIng: this.getAllIngre(cocktail),
+    });
   };
 
   setClickIng = (id) => {
@@ -150,12 +169,22 @@ class Lab extends React.Component {
   };
 
   render() {
-    const { state, setClickIng, checkMix, displayResult } = this;
-    const { cocktailIng, result } = state;
-    console.log(result);
+    const {
+      state,
+      setClickIng,
+      checkMix,
+      getCocktail,
+      changeCocktail,
+      displayResult,
+    } = this;
+    const { cocktailIng, cocktailList, result } = state;
     return (
       <div className="margin">
-        <CarouselLab />
+        <CarouselLab
+          cocktailList={cocktailList}
+          getCocktail={getCocktail}
+          chooseCocktail={changeCocktail}
+        />
         <div className="labWrapper">
           <div className="labIngWrapper">
             <h1> Follow the recipes</h1>
