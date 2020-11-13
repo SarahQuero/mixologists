@@ -8,6 +8,11 @@ function FicheCocktailRecto({
   ingredient1,
   ingredient2,
   ingredient3,
+  ingredient4,
+  strMeasure1,
+  strMeasure2,
+  strMeasure3,
+  strMeasure4,
   handleClick,
   isRotate,
 }) {
@@ -27,34 +32,28 @@ function FicheCocktailRecto({
           alt="icone cocktail"
         />
       </div>
-      <div className="fiche-cocktail-description">
-        <h2>Cocktail Description</h2>
-        <p>
-          {" "}
-          A pisco sour is an alcoholic cocktail of Peruvian origin that is
-          typical of the cuisines from Peru and Chile. The drink's name comes
-          from pisco, which is its base liquor, and the cocktail term sour, in
-          reference to sour citrus juice and sweetener components. The Peruvian
-          pisco sour uses Peruvian pisco as the base liquor and adds freshly
-          squeezed lime juice, simple syrup, ice, egg white, and Angostura
-          bitters.
-        </p>
-      </div>
       <div className="fiche-cocktail-recipe">
         <h2>Recipe</h2>
         <p>{instructions}</p>
+      </div>
+      <div className="fiche-cocktail-ingredient">
+        <h2>Ingredients</h2>
         <ul>
           <li>
             <input type="checkbox" />
-            {ingredient1}
+            {strMeasure1} {ingredient1}
           </li>
           <li>
             <input type="checkbox" />
-            {ingredient2}
+            {strMeasure2} {ingredient2}
           </li>
           <li>
             <input type="checkbox" />
-            {ingredient3}
+            {strMeasure3} {ingredient3}
+          </li>
+          <li>
+            <input type="checkbox" />
+            {strMeasure4} {ingredient4}
           </li>
         </ul>
       </div>
@@ -68,6 +67,11 @@ FicheCocktailRecto.propTypes = {
   ingredient1: PropTypes.string.isRequired,
   ingredient2: PropTypes.string.isRequired,
   ingredient3: PropTypes.string.isRequired,
+  ingredient4: PropTypes.string.isRequired,
+  strMeasure1: PropTypes.string.isRequired,
+  strMeasure2: PropTypes.string.isRequired,
+  strMeasure3: PropTypes.string.isRequired,
+  strMeasure4: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
   isRotate: PropTypes.bool.isRequired,
 };
