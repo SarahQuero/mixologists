@@ -14,6 +14,7 @@ $fontStylep: "Assistant", sans-serif;
 .labWrapper {
     display: flex;
     flex-direction: column;
+    height: 75vh;
 }
 
 
@@ -21,6 +22,7 @@ $fontStylep: "Assistant", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     background-color: $black;
     color: $gold;
 }
