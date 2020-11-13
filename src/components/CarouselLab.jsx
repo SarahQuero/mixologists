@@ -56,7 +56,11 @@ class CarouselLab extends React.Component {
               >
                 <FicheCocktail cocktail={el} />
               </div>
-              <button type="button" onClick={() => chooseCocktail(index)}>
+              <button
+                className="chooseButton"
+                type="button"
+                onClick={() => chooseCocktail(index)}
+              >
                 Choose this cocktail
               </button>
             </div>
