@@ -15,7 +15,8 @@ class FicheCocktail extends React.Component {
   };
 
   render() {
-    const { cocktail } = this.props;
+    const { cocktail, infoIng, infoMsr } = this.props;
+    console.log(cocktail);
     const { isRotate } = this.state;
     const { handleClick } = this;
     return (
@@ -29,14 +30,8 @@ class FicheCocktail extends React.Component {
         <FicheCocktailRecto
           cocktailName={cocktail.strDrink}
           instructions={cocktail.strInstructions}
-          ingredient1={cocktail.strIngredient1}
-          ingredient2={cocktail.strIngredient2}
-          ingredient3={cocktail.strIngredient3}
-          ingredient4={cocktail.strIngredient4}
-          strMeasure1={cocktail.strMeasure1}
-          strMeasure2={cocktail.strMeasure2}
-          strMeasure3={cocktail.strMeasure3}
-          strMeasure4={cocktail.strMeasure4}
+          ingredients={infoIng}
+          strMeasures={infoMsr}
           handleClick={handleClick}
           isRotate={isRotate}
         />
@@ -50,15 +45,9 @@ FicheCocktail.propTypes = {
     strDrink: PropTypes.string.isRequired,
     strDrinkThumb: PropTypes.string.isRequired,
     strInstructions: PropTypes.string.isRequired,
-    strIngredient1: PropTypes.string.isRequired,
-    strIngredient2: PropTypes.string.isRequired,
-    strIngredient3: PropTypes.string.isRequired,
-    strIngredient4: PropTypes.string.isRequired,
-    strMeasure1: PropTypes.string.isRequired,
-    strMeasure2: PropTypes.string.isRequired,
-    strMeasure3: PropTypes.string.isRequired,
-    strMeasure4: PropTypes.string.isRequired,
   }).isRequired,
+  infoIng: PropTypes.shape.isRequired,
+  infoMsr: PropTypes.shape.isRequired,
 };
 
 export default FicheCocktail;

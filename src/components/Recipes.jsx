@@ -5,24 +5,66 @@ import FicheCocktail from "./FicheCocktail";
 
 class Recipes extends React.Component {
   state = {
-    cocktails: [],
+    cocktails: [{ ingCock: [], infoCock: "", infoMsr: "" }],
   };
 
   componentDidMount() {
     this.getCocktail();
   }
 
+  getAllIngre = (array) => {
+    const newAray = [];
+    for (let i = 1; i < 16; i += 1) {
+      if (
+        array[`strIngredient${i}`] === null ||
+        array[`strIngredient${i}`] === ""
+      ) {
+        break;
+      }
+      newAray.push({
+        name: array[`strIngredient${i}`],
+        good: true,
+      });
+    }
+    return newAray;
+  };
+
+  getAllMeasures = (array) => {
+    const newAray = [];
+    for (let i = 1; i < 16; i += 1) {
+      if (array[`strMeasure${i}`] === null || array[`strMeasure${i}`] === "") {
+        break;
+      }
+      newAray.push({
+        name: array[`strMeasure${i}`],
+        good: true,
+      });
+    }
+    return newAray;
+  };
+
   getCocktail = () => {
+    const ingInfoCock = [];
     axios
       .get("https://www.thecocktaildb.com/api/json/v2/9973533/popular.php")
       .then((res) => {
-        console.log(res.data);
-        this.setState({ cocktails: res.data.drinks });
+        res.data.drinks.map((drink) => {
+          const ing = this.getAllIngre(drink);
+          const msr = this.getAllMeasures(drink);
+          ingInfoCock.push({
+            ingCock: ing,
+            infoCock: drink,
+            infoMsr: msr,
+          });
+          return "Non utilisée";
+        });
+        this.setState({ cocktails: ingInfoCock });
       });
   };
 
   render() {
     const { cocktails } = this.state;
+    console.log(cocktails);
     return (
       <div className="recipe-page margin">
         <div className="recipe-page-prez">
@@ -49,8 +91,15 @@ class Recipes extends React.Component {
         ) : (
           <div className="fichesCocktailAll">
             {cocktails.map((cocktail) => (
-              <div className="ficheCocktailSimple" key={cocktail.idDrink}>
-                <FicheCocktail cocktail={cocktail} />
+              <div
+                className="ficheCocktailSimple"
+                key={cocktail.infoCock.idDrink}
+              >
+                <FicheCocktail
+                  cocktail={cocktail.infoCock}
+                  infoIng={cocktail.infoIng}
+                  infoMsr={cocktail.infoMsr}
+                />
               </div>
             ))}
           </div>
