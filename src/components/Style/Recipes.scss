@@ -14,36 +14,61 @@ $colorBrownLight: #ddd1c6;
 $colorBrownDark: #19191c;
 
 .recipe-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 100px;
+  width: 100%;
   background-color: $colorBrownLight;
 }
 
+.recipe-page-prez {
+  margin: 0px 50px;
+}
+
+.cocktail-recipe {
+  height: 500px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .recipe-page-prez h1 {
   text-align: center;
   font-family: 'Yesteryear', cursive;
   color: $colorGold;
-  font-size: 60px;
+  font-size: 5rem;
+  margin: 30px;
 }
 .recipe-page-prez p {
   font-family: "Assistant", sans-serif;
+  text-align: justify;
   color:  #846e66;
   padding: 35px;
+  font-size: 1.1rem;
 }
 
 .fichesCocktailAll {
   padding: 40px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .ficheCocktailSimple {
   position: relative;
   width: 350px;
   min-width: 250px;
   height: 500px;
+  margin: 40px;
 }
 
+@media screen and (max-width: 900px) { 
+  .cocktail-recipe {
+    height: 200px;
+  }
+  .recipe-page-prez h1 {
+    font-size: 3rem;
+  }
+  .recipe-page-prez p {
+    padding: 0px;
+    font-size: 0.9rem;
+  }
+}
