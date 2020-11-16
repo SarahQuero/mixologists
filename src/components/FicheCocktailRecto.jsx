@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function FicheCocktailRecto({
   cocktailName,
   instructions,
-  cocktail,
+  ingredients,
   handleClick,
   isRotate,
 }) {
@@ -32,18 +32,10 @@ function FicheCocktailRecto({
       <div className="fiche-cocktail-ingredient">
         <h2>Ingredients</h2>
         <ul>
-          {cocktail.ingCock.map((ingredient) => (
-            <li key={ingredient.name}>
+          {ingredients.map((ingredient, index) => (
+            <li key={`ing${index}`}>
               <input type="checkbox" />
               {ingredient.name}
-            </li>
-          ))}
-        </ul>
-        <ul>
-          {cocktail.infoMsr.map((strMeasure) => (
-            <li key={strMeasure.name}>
-              <input type="checkbox" />
-              {strMeasure.name}
             </li>
           ))}
         </ul>
@@ -55,10 +47,12 @@ function FicheCocktailRecto({
 FicheCocktailRecto.propTypes = {
   cocktailName: PropTypes.string.isRequired,
   instructions: PropTypes.string.isRequired,
-  cocktail: PropTypes.shape({
-    ingCock: PropTypes.shape.isRequired,
-    infoMsr: PropTypes.shape.isRequired,
-  }).isRequired,
+  ingredients: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      good: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
   handleClick: PropTypes.func.isRequired,
   isRotate: PropTypes.bool.isRequired,
 };

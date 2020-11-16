@@ -5,7 +5,7 @@ import FicheCocktail from "./FicheCocktail";
 
 class Recipes extends React.Component {
   state = {
-    cocktails: [{ ingCock: [], infoCock: "", infoMsr: "" }],
+    cocktails: [],
   };
 
   componentDidMount() {
@@ -44,20 +44,18 @@ class Recipes extends React.Component {
   };
 
   getCocktail = () => {
-    const ingInfoCock = [];
+    let ingInfoCock = [];
     axios
       .get("https://www.thecocktaildb.com/api/json/v2/9973533/popular.php")
       .then((res) => {
-        res.data.drinks.map((drink) => {
+        ingInfoCock = res.data.drinks.map((drink) => {
           const ing = this.getAllIngre(drink);
-          const msr = this.getAllMeasures(drink);
-          ingInfoCock.push({
-            ingCock: ing,
+          return {
+            infoIng: ing,
             infoCock: drink,
-            infoMsr: msr,
-          });
-          return "Non utilisée";
+          };
         });
+        console.log("result :", ingInfoCock);
         this.setState({ cocktails: ingInfoCock });
       });
   };
@@ -98,7 +96,6 @@ class Recipes extends React.Component {
                 <FicheCocktail
                   cocktail={cocktail.infoCock}
                   infoIng={cocktail.infoIng}
-                  infoMsr={cocktail.infoMsr}
                 />
               </div>
             ))}
