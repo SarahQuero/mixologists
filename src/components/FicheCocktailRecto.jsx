@@ -5,14 +5,7 @@ import PropTypes from "prop-types";
 function FicheCocktailRecto({
   cocktailName,
   instructions,
-  ingredient1,
-  ingredient2,
-  ingredient3,
-  ingredient4,
-  strMeasure1,
-  strMeasure2,
-  strMeasure3,
-  strMeasure4,
+  ingredients,
   handleClick,
   isRotate,
 }) {
@@ -39,22 +32,12 @@ function FicheCocktailRecto({
       <div className="fiche-cocktail-ingredient">
         <h2>Ingredients</h2>
         <ul>
-          <li>
-            <input type="checkbox" />
-            {strMeasure1} {ingredient1}
-          </li>
-          <li>
-            <input type="checkbox" />
-            {strMeasure2} {ingredient2}
-          </li>
-          <li>
-            <input type="checkbox" />
-            {strMeasure3} {ingredient3}
-          </li>
-          <li>
-            <input type="checkbox" />
-            {strMeasure4} {ingredient4}
-          </li>
+          {ingredients.map((ingredient, index) => (
+            <li key={`ing${index}`}>
+              <input type="checkbox" />
+              {ingredient.name}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
@@ -64,14 +47,12 @@ function FicheCocktailRecto({
 FicheCocktailRecto.propTypes = {
   cocktailName: PropTypes.string.isRequired,
   instructions: PropTypes.string.isRequired,
-  ingredient1: PropTypes.string.isRequired,
-  ingredient2: PropTypes.string.isRequired,
-  ingredient3: PropTypes.string.isRequired,
-  ingredient4: PropTypes.string.isRequired,
-  strMeasure1: PropTypes.string.isRequired,
-  strMeasure2: PropTypes.string.isRequired,
-  strMeasure3: PropTypes.string.isRequired,
-  strMeasure4: PropTypes.string.isRequired,
+  ingredients: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      good: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
   handleClick: PropTypes.func.isRequired,
   isRotate: PropTypes.bool.isRequired,
 };

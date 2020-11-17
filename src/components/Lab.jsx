@@ -96,6 +96,23 @@ class Lab extends React.Component {
     return this.insertRandomIng(newAray);
   };
 
+  getAllIngredients = (array) => {
+    const newAray = [];
+    for (let i = 1; i < 16; i += 1) {
+      if (
+        array[`strIngredient${i}`] === null ||
+        array[`strIngredient${i}`] === ""
+      ) {
+        break;
+      }
+      newAray.push({
+        name: array[`strIngredient${i}`],
+        good: true,
+      });
+    }
+    return newAray;
+  };
+
   getCocktail = () => {
     const array = [];
     fetch(
@@ -105,7 +122,12 @@ class Lab extends React.Component {
       .then((cocktailReturn) => {
         const cocktail = cocktailReturn.drinks[0];
         for (let i = 0; i < 4; i += 1) {
-          array.push(cocktailReturn.drinks[i]);
+          // array.push(cocktailReturn.drinks[i]);
+          const ing = this.getAllIngredients(cocktailReturn.drinks[i]);
+          array.push({
+            infoIng: ing,
+            infoCock: cocktailReturn.drinks[i],
+          });
         }
         this.setState({
           cocktailList: array,
@@ -117,8 +139,9 @@ class Lab extends React.Component {
   changeCocktail = (n) => {
     const { cocktailList } = this.state;
     const cocktail = cocktailList[n];
+    console.log(cocktail);
     this.setState({
-      cocktailIng: this.getAllIngre(cocktail),
+      cocktailIng: this.getAllIngre(cocktail.infoCock),
     });
   };
 
@@ -147,10 +170,6 @@ class Lab extends React.Component {
     console.log("1");
     this.setState({ result: null });
     const { cocktailIng } = this.state;
-    // const resCocktailIng = cocktailIng.map((el) => {
-    //   el.checked = false;
-    //   return el;
-    // });
     const resCocktailIng = [];
     for (let i = 0; i < cocktailIng.length; i += 1) {
       resCocktailIng[i] = cocktailIng[i];

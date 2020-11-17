@@ -48,14 +48,14 @@ class CarouselLab extends React.Component {
           </span>
           {cocktailList.map((el, index) => (
             <div
-              key={el.idDrink}
+              key={el.infoCock.idDrink}
               style={{ display: index === slideIndex ? "block" : "none" }}
             >
               <div
                 className="cocktailCardContainer"
                 style={{ display: index === slideIndex ? "block" : "none" }}
               >
-                <FicheCocktail cocktail={el} />
+                <FicheCocktail cocktail={el.infoCock} infoIng={el.infoIng} />
               </div>
               <button
                 className="chooseButton"
