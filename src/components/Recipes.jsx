@@ -13,17 +13,57 @@ class Recipes extends React.Component {
     this.getCocktail();
   }
 
+  getAllIngre = (array) => {
+    const newAray = [];
+    for (let i = 1; i < 16; i += 1) {
+      if (
+        array[`strIngredient${i}`] === null ||
+        array[`strIngredient${i}`] === ""
+      ) {
+        break;
+      }
+      newAray.push({
+        name: array[`strIngredient${i}`],
+        good: true,
+      });
+    }
+    return newAray;
+  };
+
+  getAllMeasures = (array) => {
+    const newAray = [];
+    for (let i = 1; i < 16; i += 1) {
+      if (array[`strMeasure${i}`] === null || array[`strMeasure${i}`] === "") {
+        break;
+      }
+      newAray.push({
+        name: array[`strMeasure${i}`],
+        good: true,
+      });
+    }
+    return newAray;
+  };
+
   getCocktail = () => {
+    let ingInfoCock = [];
     axios
       .get("https://www.thecocktaildb.com/api/json/v2/9973533/popular.php")
       .then((res) => {
-        console.log(res.data);
-        this.setState({ cocktails: res.data.drinks });
+        ingInfoCock = res.data.drinks.map((drink) => {
+          const ing = this.getAllIngre(drink);
+          return {
+            infoIng: ing,
+            infoCock: drink,
+          };
+        });
+        console.log("result :", ingInfoCock);
+        this.setState({ cocktails: ingInfoCock });
       });
   };
 
   render() {
     const { cocktails } = this.state;
+    console.log(cocktails);
     return (
       <div className="recipe-page margin">
         <div
@@ -59,8 +99,14 @@ class Recipes extends React.Component {
         ) : (
           <div className="fichesCocktailAll">
             {cocktails.map((cocktail) => (
-              <div className="ficheCocktailSimple" key={cocktail.idDrink}>
-                <FicheCocktail cocktail={cocktail} />
+              <div
+                className="ficheCocktailSimple"
+                key={cocktail.infoCock.idDrink}
+              >
+                <FicheCocktail
+                  cocktail={cocktail.infoCock}
+                  infoIng={cocktail.infoIng}
+                />
               </div>
             ))}
           </div>
