@@ -11,6 +11,38 @@ $marron: #846e66;
 $fontStyleh1: "Yesteryear", cursive;
 $fontStylep: "Assistant", sans-serif;
 
+.labcocktail-banner {
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.labcocktail-page-prez h1 {
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    color: $gold;
+    font-size: 5rem;
+    margin: 0px;
+}
+
+.labcocktail-page-prez h2 {
+    text-align: center;
+    font-family: "Assistant", sans-serif;
+    color: $gold;
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.labcocktail-page-prez p {
+    font-family: "Assistant", sans-serif;
+    text-align: center;
+    color:  #846e66;
+    padding: 20px;
+    font-size: 1.3rem;
+  }
+
 .labWrapper {
     display: flex;
     flex-direction: column;

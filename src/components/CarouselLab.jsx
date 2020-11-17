@@ -34,8 +34,9 @@ class CarouselLab extends React.Component {
     return (
       <div className="carouselContainer">
         <button type="button" onClick={getCocktail} className="buttonRandom">
-          Random Cocktail
+          Generate Cocktails
         </button>
+
         <div className="carouselCocktailContainer">
           <span
             role="button"
@@ -62,7 +63,7 @@ class CarouselLab extends React.Component {
                 type="button"
                 onClick={() => chooseCocktail(index)}
               >
-                Choose this cocktail
+                Select this cocktail
               </button>
             </div>
           ))}

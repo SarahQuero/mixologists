@@ -2,6 +2,7 @@ import React from "react";
 import "./Style/Lab.scss";
 import CarouselLab from "./CarouselLab";
 import verreVide from "../../public/images/verre_vide.png";
+import labCocktail from "../../public/assets/labcocktail.jpg";
 import LabResult from "./LabResult";
 
 class Lab extends React.Component {
@@ -199,15 +200,72 @@ class Lab extends React.Component {
     const { cocktailIng, cocktailList, result } = state;
     return (
       <div className="margin">
-        <CarouselLab
-          cocktailList={cocktailList}
-          getCocktail={getCocktail}
-          chooseCocktail={changeCocktail}
+        <div
+          className="labcocktail-banner"
+          style={{
+            backgroundImage: `url(${labCocktail})`,
+          }}
         />
+        <div className="labcocktail-page-prez">
+          <h1>Lab Cocktail</h1>
+          <p>
+            {" "}
+            <strong>Welcome to the Lab Cocktail</strong>, a virtual cocktail bar
+            where you will{" "}
+            <strong>
+              learn how to prepare your own cocktail and become a Cocktail
+              Master.
+            </strong>
+          </p>
+          <h2>Game Initialization</h2>
+          <p>
+            {" "}
+            Step 1 : <strong>Click on Generate Cocktails</strong> to generate 4
+            new cocktails to learn.{" "}
+          </p>
+          <p>
+            The left and right arrows will allow you to select the cocktail you
+            want to choose.{" "}
+          </p>
+          <p>
+            You can access the Cocktail Recipe{" "}
+            <strong>by clicking on the Cocktail Card.</strong>
+          </p>
+          <p>
+            Step 2 : Then, <strong>click on Choose Cocktail</strong> to select
+            the cocktail and start the game.
+          </p>
+        </div>
+        <div>
+          <CarouselLab
+            cocktailList={cocktailList}
+            getCocktail={getCocktail}
+            chooseCocktail={changeCocktail}
+          />
+        </div>
+        <div className="labcocktail-page-prez">
+          <h2>Ready to play !</h2>
+          <p>
+            Step 3 : Follow the Cocktail recipe and{" "}
+            <strong>
+              select below the right ingredients to make your own cocktail.
+            </strong>
+          </p>
+          <p>
+            Everytime you add a new ingredient, you can see the glass filling up
+            with the selected ingredients.
+          </p>
+          <p>
+            Step 4: When you're ready to mix your cocktail,{" "}
+            <strong>click on Mix</strong>.
+          </p>
+          <p>
+            Step 5: <strong>Discover the result !</strong>
+          </p>
+        </div>
         <div className="labWrapper">
           <div className="labIngWrapper">
-            <h1> Follow the recipes</h1>
-            <h2>Ingredients</h2>
+            <h1> Select the right ingredients</h1>
             <ul>
               {cocktailIng.map((el, id) => (
                 <li
