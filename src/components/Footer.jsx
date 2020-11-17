@@ -1,38 +1,34 @@
 import React from "react";
 import "./Style/Footer.scss";
+import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-social-medias">
-          <a href="https://wwww.google.com" className="icons">
-            <img
-              src="https://img.icons8.com/color/2x/facebook.png"
-              alt="facebook"
-            />
+          <a href="https://www.facebook.com/TheDataDB/" className="icons">
+            <FaFacebook size={30} />
           </a>
-          <a href="https://wwww.google.com" className="icons">
-            <img
-              src="https://img.icons8.com/color/2x/instagram-new.png"
-              alt="instagram"
-            />
+          <a
+            href="https://www.instagram.com/explore/tags/cocktails/?hl=fr"
+            className="icons"
+          >
+            <FaInstagram size={30} />
           </a>
-          <a href="https://wwww.google.com" className="icons">
-            <img
-              src="https://img.icons8.com/color/2x/twitter.png"
-              alt="twitter"
-            />
+          <a href="https://twitter.com/hashtag/cocktails" className="icons">
+            <FaTwitter size={30} />
           </a>
-          <a href="https://wwww.google.com" className="icons">
-            <img
-              src="https://img.icons8.com/nolan/2x/github.png"
-              alt="Github"
-            />
+          <a
+            href="https://github.com/WildCodeSchool/092020-laloupe-p2-les_mixologistes"
+            className="icons"
+          >
+            <FaGithub size={30} />
           </a>
         </div>
         <div className="contact-us">
-          <a href="https://wwww.google.com">Contact Us</a>
+          <Link to="/Contact">Contact Us</Link>
         </div>
       </div>
     </footer>
