@@ -4,8 +4,8 @@ import ReactGlobe from "react-globe";
 
 // import defaultMarkers from "./markers";
 
-function markerTooltipRenderer(marker) {
-  return `CITY: ${marker.city} (Value: ${marker.value})`;
+function markerTooltipRenderer() {
+  return "Click for more information";
 }
 
 const options = {
