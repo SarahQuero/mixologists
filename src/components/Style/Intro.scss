@@ -40,6 +40,23 @@
     background-size: cover;
 
 }
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    .introContainer {
+        padding: 20px;
+    }
+    .introContainer p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .introContainer h1 {
+        font-size: 45px;
+    }
+    .logoIntro{
+        width: 250px;
+        height: 250px;
+    }
+}
 @media only screen and (min-width: 320px) and (max-width : 1185px) {
     .imgHome {
         height: 50vh;

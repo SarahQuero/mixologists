@@ -6,7 +6,7 @@ nav {
   background-color: #19191c;
   top: 0;
   color: #cbb075;
-  font-size: 40px;
+  font-size: 25px;
 }
 .menuBurger {
   position: relative;
@@ -32,7 +32,7 @@ nav {
 .menuBars {
   background-color: #cbb075;
   width: 55px;
-  height: 6px;
+  height: 5px;
   margin: 6px 0;
   border-radius: 1px;
   transition: all 0.5s ease-in-out;
@@ -43,7 +43,7 @@ nav {
   position: absolute;
   content: "";
   width: 55px;
-  height: 6px;
+  height: 5px;
   border-radius: 1px;
   transition: all 0.5s ease-in-out;
 }
@@ -112,7 +112,7 @@ nav {
   margin-left: 20px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
   nav {
     font-size: 20px;
   }
