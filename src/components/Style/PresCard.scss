@@ -8,6 +8,10 @@ $marron: #846e66;
   color: $gold;
   padding: 50px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .PresCard h2 {
   font-family: "Yesteryear", cursive;
@@ -22,17 +26,17 @@ $marron: #846e66;
 }
 .PresCard-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 30px;
+  width: 100%;
 }
 
 .PresCard .inversePres {
   flex-direction: row-reverse;
 }
 .PresCard-card-desc {
-  margin: 30px 0 30px 0;
   text-align: center;
   font-family: "Assistant", sans-serif;
   font-size: 25px;
@@ -43,6 +47,7 @@ $marron: #846e66;
   color: $marron;
   padding: 0 30px;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   max-width: 500px;
   height: 500px;
@@ -61,7 +66,6 @@ $marron: #846e66;
 }
 
 .PresCard-card-txt h3 {
-  margin-top: 10px;
   text-align: center;
   font-family: "Yesteryear", cursive;
   font-weight: 100;
@@ -114,15 +118,41 @@ $marron: #846e66;
 .PresCard-imgCard img {
   width: 500px;
   height: 500px;
+  border-radius: 10px;
 }
 
-@media (max-width: 900px) {
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .PresCard-desc-main{
+    font-size: 20px;
+    text-align: center;
+  }
+  .PresCard{
+    padding: 20px;
+  }
+  .PresCard-card-txt h3 {
+    font-size: 40px;
+  }
+  .PresCard-card-desc {
+    font-size: 15px;
+  }
+  .PresCard-card-txt button {
+    padding: 10px 15px 10px 15px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .PresCard-imgCard img {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
   .PresCard-wrapper {
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
   }
   .PresCard-imgCard {
-    margin-top: 20px;
-    width: 100%;
+    margin-top: 50px;
   }
 }
