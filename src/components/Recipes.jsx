@@ -56,14 +56,12 @@ class Recipes extends React.Component {
             infoCock: drink,
           };
         });
-        console.log("result :", ingInfoCock);
         this.setState({ cocktails: ingInfoCock });
       });
   };
 
   render() {
     const { cocktails } = this.state;
-    console.log(cocktails);
     return (
       <div className="recipe-page margin">
         <div

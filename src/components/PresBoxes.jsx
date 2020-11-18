@@ -25,7 +25,7 @@ class PresBoxes extends React.Component {
         fetch("https://www.thecocktaildb.com/api/json/v2/9973533/popular.php")
           .then((response) => response.json())
           .then((data2) => {
-            for (let i = 0; i < 7; i += 1) {
+            for (let i = 0; i < 5; i += 1) {
               arrayCocktail.push(data2.drinks[i]);
             }
             this.setState({ cocktailBox: arrayCocktail });
@@ -35,7 +35,6 @@ class PresBoxes extends React.Component {
 
   render() {
     const { cocktailBox } = this.state;
-    console.log(cocktailBox);
     return (
       <>
         <div className="presBoxesContainer">
@@ -48,11 +47,12 @@ class PresBoxes extends React.Component {
           </p>
           <div className="presBoxesCardContainer">
             {cocktailBox.map((el) => (
-              <BoxesCardHome
-                key={el.idDrink}
-                titleCocktail={el.strDrink}
-                imgCocktail={el.strDrinkThumb}
-              />
+              <div className="presBoxCardMain" key={el.idDrink}>
+                <BoxesCardHome
+                  titleCocktail={el.strDrink}
+                  imgCocktail={el.strDrinkThumb}
+                />
+              </div>
             ))}
           </div>
         </div>
