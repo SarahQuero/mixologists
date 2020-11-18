@@ -7,12 +7,14 @@ function FicheCocktailVerso({
   cocktailPicture,
   handleClick,
   isRotate,
+  black,
 }) {
   return (
     <div
       role="button"
       tabIndex="0"
-      className={`fiche-cocktail ${!isRotate ? "verso" : "recto"}`}
+      className={`fiche-cocktail ${!isRotate ? "verso" : "recto"}
+      ${black ? "blackCard" : null}`}
       onClick={handleClick}
       onKeyDown={handleClick}
     >
@@ -33,10 +35,12 @@ FicheCocktailVerso.propTypes = {
   cocktailName: PropTypes.string.isRequired,
   cocktailPicture: PropTypes.string.isRequired,
   isRotate: PropTypes.bool,
+  black: PropTypes.bool,
   handleClick: PropTypes.func.isRequired,
 };
 FicheCocktailVerso.defaultProps = {
   isRotate: false,
+  black: false,
 };
 
 export default FicheCocktailVerso;

@@ -104,7 +104,7 @@ function World() {
             padding: 12,
           }}
         >
-          <FicheCocktail cocktail={cock} infoIng={getAllIngre(cock)} />
+          <FicheCocktail cocktail={cock} infoIng={getAllIngre(cock)} black />
         </div>
       )}
       <ReactGlobe
