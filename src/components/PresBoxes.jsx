@@ -35,7 +35,6 @@ class PresBoxes extends React.Component {
 
   render() {
     const { cocktailBox } = this.state;
-    console.log(cocktailBox);
     return (
       <>
         <div className="presBoxesContainer">
