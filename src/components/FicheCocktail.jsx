@@ -15,8 +15,7 @@ class FicheCocktail extends React.Component {
   };
 
   render() {
-    const { cocktail, infoIng } = this.props;
-    console.log(infoIng);
+    const { cocktail, infoIng, black } = this.props;
     const { isRotate } = this.state;
     const { handleClick } = this;
     return (
@@ -26,6 +25,7 @@ class FicheCocktail extends React.Component {
           cocktailPicture={cocktail.strDrinkThumb}
           handleClick={handleClick}
           isRotate={isRotate}
+          black={black}
         />
         <FicheCocktailRecto
           cocktailName={cocktail.strDrink}
@@ -33,6 +33,7 @@ class FicheCocktail extends React.Component {
           ingredients={infoIng}
           handleClick={handleClick}
           isRotate={isRotate}
+          black={black}
         />
       </>
     );
@@ -51,6 +52,11 @@ FicheCocktail.propTypes = {
       good: PropTypes.bool.isRequired,
     })
   ).isRequired,
+  black: PropTypes.bool,
+};
+
+FicheCocktail.defaultProps = {
+  black: false,
 };
 
 export default FicheCocktail;
