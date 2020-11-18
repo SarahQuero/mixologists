@@ -2,17 +2,16 @@ import React, { useState } from "react";
 import "./Style/World.scss";
 import ReactGlobe from "react-globe";
 import FicheCocktail from "./FicheCocktail";
-// import defaultMarkers from "./markers";
 
 function World() {
   const markers = [
     {
       id: "marker1",
-      city: "Singapore",
+      city: "Pérou",
       color: "red",
-      coordinates: [1.3521, 103.8198],
+      coordinates: [-9.757481, -74.455289],
       value: 50,
-      cock: "margarita",
+      cock: "pisco sour",
     },
     {
       id: "marker2",
@@ -88,27 +87,43 @@ function World() {
         setCard(true);
       });
   }
-  function onDefocus() {
+  function onDefocus(e) {
+    if (
+      e !== undefined &&
+      e.target !== undefined &&
+      e.target.id !== "wrapperCard"
+    ) {
+      return;
+    }
     setCard(false);
     setCock([]);
   }
 
   return (
-    <div>
+    <div className="margin">
       {cardVisible && (
         <div
+          onClick={onDefocus}
+          role="treeitem"
+          tabIndex="-1"
+          onKeyDown={onDefocus}
+          id="wrapperCard"
           style={{
-            background: "white",
-            fontSize: 20,
-            bottom: 0,
             padding: 12,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <FicheCocktail cocktail={cock} infoIng={getAllIngre(cock)} black />
         </div>
       )}
       <ReactGlobe
-        height="100vh"
+        height="75.5vh"
         markers={markers}
         options={{ markerTooltipRenderer }}
         width="100vw"
