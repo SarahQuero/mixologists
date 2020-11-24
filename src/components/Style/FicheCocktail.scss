@@ -30,7 +30,11 @@ $colorBrownDark: #19191c;
   padding: 20px;
   overflow: hidden;
   outline: 0;
+}
 
+.blackCard {
+  background-color: #19191c;
+  box-shadow: -15px 0px 25px $colorBrownDark;
 }
 
 .fiche-cocktail-main {
@@ -48,6 +52,11 @@ $colorBrownDark: #19191c;
   text-align: justify;
   color: #19191c;
 }
+
+.blackCard p {
+  color: #ddd1c6;
+}
+
   //Verso (Face)
 .fiche-cocktail.verso {
   position: absolute;
@@ -91,6 +100,10 @@ $colorBrownDark: #19191c;
   box-shadow: -15px 0px 25px $colorBrownLight;
 }
 
+.blackCard .fiche-cocktail-image {
+  box-shadow: -15px 0px 25px $colorBrownDark;
+}
+
 .fiche-cocktail-name {
   display: flex;
   justify-content: center;
@@ -124,4 +137,8 @@ $colorBrownDark: #19191c;
 .fiche-cocktail-ingredient li {
   font-family: $fontStylep;
   font-size: 0.8em;
+}
+
+.blackCard .fiche-cocktail-ingredient li {
+  color: #ddd1c6;
 }
