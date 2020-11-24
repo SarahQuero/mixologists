@@ -13,13 +13,10 @@ function BoxCard({ boxImg, boxTitle, yes }) {
             backgroundImage: `url(${boxImg})`,
           }}
         />
-        <div className="BoxDesc">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          <button type="button" onClick={yes}>
-            Buy
-          </button>
-        </div>
       </div>
+      <button type="button" className="buttonBuyBox" onClick={yes}>
+        Learn More
+      </button>
     </div>
   );
 }

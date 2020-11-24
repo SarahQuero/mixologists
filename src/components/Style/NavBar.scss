@@ -112,7 +112,7 @@ nav {
   margin-left: 20px;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 768px) {
+@media only screen and (min-width: 0px) and (max-width: 767px) {
   nav {
     font-size: 20px;
   }
@@ -139,12 +139,13 @@ nav {
   }
   #menu ul {
     font-size: 20px;
+    margin-top: 50px;
   }
   .lineMenu {
     height: 40px;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 878px) {
+@media only screen and (min-width: 768px) and (max-width: 878px) {
   nav {
     font-size: 18px;
   }
@@ -202,7 +203,7 @@ nav {
 }
 @media only screen and (min-width: 1254px) and (max-width: 1550px) {
   #menu ul {
-    margin-top: 150px;
+    margin-top: 50px;
     font-size: 30px;
   }
   .lineMenu {
