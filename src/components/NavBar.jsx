@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Style/NavBar.scss";
+import PropTypes from "prop-types";
 
 class NavBar extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       menuOpen: false,
     };
@@ -18,6 +19,7 @@ class NavBar extends React.Component {
 
   render() {
     const { menuOpen } = this.state;
+    const { short } = this.props;
     return (
       <div>
         <nav>
@@ -27,18 +29,20 @@ class NavBar extends React.Component {
               src="https://i.ibb.co/zbPyQZW/logo-experimentalcocktail.png"
               alt="logo"
             />
-            <div className="menuBurgerContainer">
-              <div
-                role="button"
-                tabIndex="-1"
-                className={menuOpen ? "menuBurger open" : "menuBurger"}
-                onClick={this.handleClick}
-                onKeyDown={this.handleClick}
-              >
-                <span className="menuBars" />
+            {!short && (
+              <div className="menuBurgerContainer">
+                <div
+                  role="button"
+                  tabIndex="-1"
+                  className={menuOpen ? "menuBurger open" : "menuBurger"}
+                  onClick={this.handleClick}
+                  onKeyDown={this.handleClick}
+                >
+                  <span className="menuBars" />
+                </div>
+                <h2 id="titleMenu">MENU</h2>
               </div>
-              <h2 id="titleMenu">MENU</h2>
-            </div>
+            )}
           </div>
         </nav>
         <div id="menu" className={menuOpen ? "menuOpen" : "menuClose"}>
@@ -84,4 +88,13 @@ class NavBar extends React.Component {
     );
   }
 }
+
+NavBar.propTypes = {
+  short: PropTypes.bool,
+};
+
+NavBar.defaultProps = {
+  short: false,
+};
+
 export default NavBar;

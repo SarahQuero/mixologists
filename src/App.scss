@@ -1,4 +1,4 @@
-// Font family 
+// Font family
 @import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
 
@@ -37,3 +37,77 @@ a {
     margin-top: 65px;
   }
 }
+
+.wrapperInt {
+  background-color: #CBB075;
+  margin: 50px 15%;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.bodyInt {
+  overflow: hidden;
+  background-color: $colorBrownDark;
+  height: 100vh;
+}
+
+.wrapperInt h1 {
+  margin-bottom: 15px;
+  font-size: 75px;
+  font-family: 'Yesteryear', cursive;
+}
+
+.wrapperInt h2 {
+  font-size: 25px;
+  font-family: "Assistant", sans-serif;
+}
+
+.wrapperInt button {
+  font-family: "Assistant", sans-serif;
+  padding: 5px 40px;
+  width: 35%;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #19191C;
+  color: #DDD1C6;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.wrapperInt button:hover{
+  color: #CBB075;
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,0.75);
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imgInt {
+  filter: brightness(0%);
+  max-width: 50%;
+}
+
+@media (min-width:800px) {
+  .imgInt {
+    max-width: 50%;
+  }
+}
+
+@media (max-width:500px) {
+  .wrapperInt button {
+    margin: 10px;
+  }
+}
+
+
