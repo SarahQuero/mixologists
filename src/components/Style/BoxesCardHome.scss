@@ -9,7 +9,10 @@ $colorBrown: #846E66;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
+    height: 500px;
+    width: 400px;
 }
 .presBoxesCard h3 {
     font-size: 60px;
@@ -22,26 +25,32 @@ $colorBrown: #846E66;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 500px;
-    width: 500px;
+    height: 250px;
+    width: 250px;
     border-radius: 10px;
 }
 .boxesButtonAcces {
-    margin: 60px;
-    padding: 30px 100px 30px 100px;
+    padding: 15px 50px 15px 50px;
     border: none;
     border-radius: 10px;
     font-family: "Assistant", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     background-color: $colorGold;
     color: $colorBrownDark;
     outline-width: 0;
     cursor: pointer;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 0px) and (max-width: 928px) {
+    .presBoxesCard{
+        width: 300px;
+        height: 400px;
+    }
     .presBoxesImg {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+    }
+    .presBoxesCard h3 {
+        font-size: 50px;
     }
 }

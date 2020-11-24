@@ -168,7 +168,6 @@ class Lab extends React.Component {
   };
 
   displayResult = () => {
-    console.log("1");
     this.setState({ result: null });
     const { cocktailIng } = this.state;
     const resCocktailIng = [];
