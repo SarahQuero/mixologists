@@ -30,10 +30,24 @@ class CarouselLab extends React.Component {
 
   render() {
     const { slideIndex } = this.state;
-    const { cocktailList, getCocktail, chooseCocktail } = this.props;
+    const {
+      cocktailList,
+      getCocktail,
+      chooseCocktail,
+      getSelected,
+      getFalse,
+      cocktailButton,
+    } = this.props;
     return (
       <div className="carouselContainer">
-        <button type="button" onClick={getCocktail} className="buttonRandom">
+        <button
+          type="button"
+          onClick={() => {
+            getCocktail();
+            getFalse();
+          }}
+          className="buttonRandom"
+        >
           Generate Cocktails
         </button>
 
@@ -43,7 +57,10 @@ class CarouselLab extends React.Component {
             className="prev"
             tabIndex="0"
             onKeyDown={() => this.plusSlide(-1)}
-            onClick={() => this.plusSlide(-1)}
+            onClick={() => {
+              this.plusSlide(-1);
+              getFalse();
+            }}
           >
             &#10094;
           </span>
@@ -59,9 +76,12 @@ class CarouselLab extends React.Component {
                 <FicheCocktail cocktail={el.infoCock} infoIng={el.infoIng} />
               </div>
               <button
-                className="chooseButton"
+                className={cocktailButton ? "buttonFalse" : "chooseButton"}
                 type="button"
-                onClick={() => chooseCocktail(index)}
+                onClick={() => {
+                  chooseCocktail(index);
+                  getSelected();
+                }}
               >
                 Select this cocktail
               </button>
@@ -72,7 +92,10 @@ class CarouselLab extends React.Component {
             role="button"
             tabIndex="0"
             onKeyDown={() => this.plusSlide(1)}
-            onClick={() => this.plusSlide(1)}
+            onClick={() => {
+              this.plusSlide(1);
+              getFalse();
+            }}
           >
             &#10095;
           </span>
@@ -86,6 +109,9 @@ CarouselLab.propTypes = {
   cocktailList: PropTypes.array.isRequired,
   getCocktail: PropTypes.func.isRequired,
   chooseCocktail: PropTypes.func.isRequired,
+  getSelected: PropTypes.func.isRequired,
+  getFalse: PropTypes.func.isRequired,
+  cocktailButton: PropTypes.bool.isRequired,
 };
 
 export default CarouselLab;

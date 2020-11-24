@@ -21,7 +21,10 @@ class Lab extends React.Component {
       cocktailList: [],
       cocktailIng: [],
       result: null,
+      cocktailButton: false,
     };
+    this.getSelected = this.getSelected.bind(this);
+    this.getFalse = this.getFalse.bind(this);
   }
 
   componentDidMount() {
@@ -146,6 +149,19 @@ class Lab extends React.Component {
     });
   };
 
+  getSelected = () => {
+    const { cocktailButton } = this.state;
+    this.setState({
+      cocktailButton: !cocktailButton,
+    });
+  };
+
+  getFalse = () => {
+    this.setState({
+      cocktailButton: false,
+    });
+  };
+
   setClickIng = (id) => {
     const { cocktailIng } = this.state;
     const copyState = cocktailIng;
@@ -195,8 +211,10 @@ class Lab extends React.Component {
       getCocktail,
       changeCocktail,
       displayResult,
+      getSelected,
+      getFalse,
     } = this;
-    const { cocktailIng, cocktailList, result } = state;
+    const { cocktailIng, cocktailList, result, cocktailButton } = state;
     return (
       <div className="margin">
         <div
@@ -240,6 +258,9 @@ class Lab extends React.Component {
             cocktailList={cocktailList}
             getCocktail={getCocktail}
             chooseCocktail={changeCocktail}
+            getSelected={getSelected}
+            getFalse={getFalse}
+            cocktailButton={cocktailButton}
           />
         </div>
         <div className="labcocktail-page-prez">
@@ -279,7 +300,12 @@ class Lab extends React.Component {
                 </li>
               ))}
             </ul>
-            <button type="button" onClick={checkMix}>
+            <button
+              type="button"
+              onClick={() => {
+                checkMix();
+              }}
+            >
               Mix
             </button>
           </div>
