@@ -27,7 +27,7 @@
     color: #cbb075;
     font-size: 30px;
 }
-.fields-form input {
+.general-input {
     margin: 20px 0;
     border:none;
     border-bottom: 1px solid grey;
@@ -50,6 +50,18 @@
     margin: 20px 0;
 }
 
+.favourite-cock-choice {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.radio-buttom-field {
+    margin: 10px 0;
+    color: #19191c;
+    font-size: 15px;
+}
+
 .submit-form {
     padding: 15px;
     border: 0;
@@ -61,8 +73,10 @@
     cursor: pointer;
     outline: 0;
     margin: 40px 0 0 10px;
+    width: 200px;
 }
 
 .fields-form ::placeholder { 
     color: #19191c;
+    font-size: 15px;
   }
