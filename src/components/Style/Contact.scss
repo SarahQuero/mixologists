@@ -80,3 +80,13 @@
     color: #19191c;
     font-size: 15px;
   }
+
+
+  @media screen and (max-width: 900px) { 
+.fields-form h1 {
+    font-size: 40px;
+}
+.fields-form {
+    width: 70%;
+}
+}
