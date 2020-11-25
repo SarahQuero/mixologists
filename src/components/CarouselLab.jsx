@@ -30,19 +30,37 @@ class CarouselLab extends React.Component {
 
   render() {
     const { slideIndex } = this.state;
-    const { cocktailList, getCocktail, chooseCocktail } = this.props;
+    const {
+      cocktailList,
+      getCocktail,
+      chooseCocktail,
+      getSelected,
+      getFalse,
+      cocktailButton,
+    } = this.props;
     return (
       <div className="carouselContainer">
-        <button type="button" onClick={getCocktail} className="buttonRandom">
-          Random Cocktail
+        <button
+          type="button"
+          onClick={() => {
+            getCocktail();
+            getFalse();
+          }}
+          className="buttonRandom"
+        >
+          Generate Cocktails
         </button>
+
         <div className="carouselCocktailContainer">
           <span
             role="button"
             className="prev"
             tabIndex="0"
             onKeyDown={() => this.plusSlide(-1)}
-            onClick={() => this.plusSlide(-1)}
+            onClick={() => {
+              this.plusSlide(-1);
+              getFalse();
+            }}
           >
             &#10094;
           </span>
@@ -57,13 +75,18 @@ class CarouselLab extends React.Component {
               >
                 <FicheCocktail cocktail={el.infoCock} infoIng={el.infoIng} />
               </div>
-              <button
-                className="chooseButton"
-                type="button"
-                onClick={() => chooseCocktail(index)}
-              >
-                Choose this cocktail
-              </button>
+              <div>
+                <button
+                  className={cocktailButton ? "buttonFalse" : "chooseButton"}
+                  type="button"
+                  onClick={() => {
+                    chooseCocktail(index);
+                    getSelected();
+                  }}
+                >
+                  Select cocktail
+                </button>
+              </div>
             </div>
           ))}
           <span
@@ -71,7 +94,10 @@ class CarouselLab extends React.Component {
             role="button"
             tabIndex="0"
             onKeyDown={() => this.plusSlide(1)}
-            onClick={() => this.plusSlide(1)}
+            onClick={() => {
+              this.plusSlide(1);
+              getFalse();
+            }}
           >
             &#10095;
           </span>
@@ -85,6 +111,9 @@ CarouselLab.propTypes = {
   cocktailList: PropTypes.array.isRequired,
   getCocktail: PropTypes.func.isRequired,
   chooseCocktail: PropTypes.func.isRequired,
+  getSelected: PropTypes.func.isRequired,
+  getFalse: PropTypes.func.isRequired,
+  cocktailButton: PropTypes.bool.isRequired,
 };
 
 export default CarouselLab;

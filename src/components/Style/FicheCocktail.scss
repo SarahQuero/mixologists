@@ -26,7 +26,7 @@ $colorBrownDark: #19191c;
   min-width: 250px;
   height: 500px;
   padding: 10px;
-  margin: 10px;
+  // margin: 10px;
   padding: 20px;
   overflow: hidden;
   outline: 0;
@@ -141,4 +141,27 @@ $colorBrownDark: #19191c;
 
 .blackCard .fiche-cocktail-ingredient li {
   color: #ddd1c6;
+}
+
+@media screen and (max-width: 900px) { 
+  .fiche-cocktail {
+    width: 280px;
+    min-width: 250px;
+    height: 450px;
+  }
+  .fiche-cocktail-image {
+    width: 240px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 350px) { 
+  .fiche-cocktail {
+    width: 240px;
+    max-width: 200px;
+    height: 450px;
+  }
+  .fiche-cocktail-image {
+    width: 200px;
+    height: 280px;
+  }
 }
