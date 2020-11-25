@@ -67,6 +67,8 @@ $colorBrown: #846E66;
     font-family: $fontStyleh1;
     font-size: 40px;
     color: $colorGold;
+    text-align: center;
+
 }
 .backgroundBox {
     background-color: $colorBrownLight;
@@ -112,10 +114,10 @@ $colorBrown: #846E66;
     background-color: rgba(0, 0, 0, 0.74);
 }
 .popUpDescBox {
-    padding: 20px;
+    padding: 30px;
     position: relative;
     color: $colorBrownDark;
-    width: 50%;
+    width: 70%;
     background-color: $colorBrownLight;
     border-radius: 10px;
     display: flex;
@@ -158,6 +160,8 @@ $colorBrown: #846E66;
     font-size: 50px;
     font-weight: 100;
     margin-bottom: 10px;
+    text-align: center;
+
 }
 .boxContent {
     color: $colorGold;
@@ -224,4 +228,87 @@ $colorBrown: #846E66;
     font-size: 50px;
     font-family: $fontStylep;
     color: $colorBrownDark;
+}
+
+@media only screen and (max-width: 425px) {
+    .BoxImg{
+        width: 200px;
+        height: 200px;
+    }
+    .BoxContainer{
+        width: 400px;
+    }
+    .BoxContainer h3{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1275px) {
+    .popUpImg{
+        width: 300px;
+        height: 350px;
+    }
+    .boxContent {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 999px){
+    .popUpImg{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 528px){
+    .popUpDescBox {
+        width: 80%;
+    }
+    .popUpDescBox h2 {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .buy-box {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .buy-box button {
+        margin: 0;
+    }
+    .boxContent {
+        width: 400px;
+        height: 250px;
+        padding: 20px;
+    }
+    .boxContent h3 {
+        font-size: 20px;
+    }
+    .boxElement {
+        margin: 0;
+    }
+    .boxContent h4 {
+        font-size: 20px;
+    } 
+    .boxContent p {
+        font-size: 15px;
+    }
+    .boxContent li {
+        font-size: 15px;
+    }
+    .buy-box button {
+        padding: 5px 15px 5px 15px;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .BoxTop{
+        padding: 20px;
+    }
+    .BoxTop h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .BoxTop p {
+        font-size: 20px;
+        text-align: center;
+    }
 }
