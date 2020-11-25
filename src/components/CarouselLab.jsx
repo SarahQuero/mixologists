@@ -75,16 +75,18 @@ class CarouselLab extends React.Component {
               >
                 <FicheCocktail cocktail={el.infoCock} infoIng={el.infoIng} />
               </div>
-              <button
-                className={cocktailButton ? "buttonFalse" : "chooseButton"}
-                type="button"
-                onClick={() => {
-                  chooseCocktail(index);
-                  getSelected();
-                }}
-              >
-                Select this cocktail
-              </button>
+              <div>
+                <button
+                  className={cocktailButton ? "buttonFalse" : "chooseButton"}
+                  type="button"
+                  onClick={() => {
+                    chooseCocktail(index);
+                    getSelected();
+                  }}
+                >
+                  Select cocktail
+                </button>
+              </div>
             </div>
           ))}
           <span

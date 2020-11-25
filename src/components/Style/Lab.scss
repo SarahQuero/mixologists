@@ -67,7 +67,9 @@ $fontStylep: "Assistant", sans-serif;
 
 .labIngWrapper h1 {
   font-family: "Yesteryear", cursive;
-  font-size: 60px;
+  font-size: 40px;
+  margin: 10px;
+  text-align: center;
 }
 
 .labIngWrapper h2 {
@@ -76,15 +78,16 @@ $fontStylep: "Assistant", sans-serif;
 }
 
 .labIngWrapper ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    width: auto;
 }
 
 .labIngWrapper ul li {
     font-family: "Assistant", sans-serif;
-    font-size: 22px;
-    margin: 20px;
+    font-size: 10px;
+    margin: 8px;
     border: 2px $gold solid;
     padding: 5px;
     list-style-type: none;
@@ -92,7 +95,7 @@ $fontStylep: "Assistant", sans-serif;
     transition: ease 0.5s;
     border-radius: 10px;
     outline: 0;
-
+    text-align: center;
 }
 
 .labIngWrapper ul li:hover {
@@ -130,25 +133,27 @@ $fontStylep: "Assistant", sans-serif;
     align-items: center;
     width: 100%;
     padding-bottom: 30px;
+    padding-top: 30px;
     background-color: $white;
     overflow: hidden;
 }
 
 .verreWrapper img {
-    width: 25%;
+    width: 50%;
 }
 
 .verreColorWrapper {
     position: absolute;
     bottom: 35px;
-    width: 25%;
+    width: 45%;
 }
 
 .verreColorWrapper div {
     font-family: "Assistant", sans-serif;
     text-align: center;
-    padding: 2px 0;
+    padding: 5px 0;
     color: $black;
+    font-size: 10px;
 }
 
 .popup {  
@@ -170,7 +175,8 @@ $fontStylep: "Assistant", sans-serif;
     top: 25%;  
     bottom: 25%;  
     margin: auto;  
-    border-radius: 20px;  
+    border-radius: 20px;
+    height:200px;  
     background: $gold;  
     display: flex;
     flex-direction: column;
@@ -185,7 +191,7 @@ $fontStylep: "Assistant", sans-serif;
       font-family: $fontStyleh1;
       color: $black;
       text-align: center;
-
+      font-size: 15px;
   }
   .popup-bottom {
       border-radius: 10px;
@@ -201,7 +207,21 @@ $fontStylep: "Assistant", sans-serif;
       cursor: pointer;
   }
 
-  @media (min-width: 900px) {
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .verreWrapper img {
+        width: 30%;
+    }
+    
+    .verreColorWrapper {
+        width: 25%;
+    }
+    .popup-inner-text h1 {
+        font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
     .labcocktail-banner {
         height: 500px;
     }
@@ -219,14 +239,19 @@ $fontStylep: "Assistant", sans-serif;
     .labWrapper {
       flex-direction: row;  
     }
+    
+    .labIngWrapper h1 {
+        font-size: 60px;
+      }
+    
     .verreSpacer {
         display: none;
     }
     .labIngWrapper {
         width: 100%;
     }
-    .verreWrapper img {
-        width: 45%;
+    .labIngWrapper ul li {
+        font-size: 22px;
     }
     .verreColorWrapper {
         position: absolute;
@@ -234,8 +259,15 @@ $fontStylep: "Assistant", sans-serif;
         width: 45%;
     }
 
+    .verreColorWrapper div {
+        padding: 10px 0;
+        font-size: 15px;
+    }
     .verreWrapper img {
         position: absolute;
         bottom: 25px;
+    }
+    .popup-inner-text h1 {
+        font-size: 30px;
     }
   }
