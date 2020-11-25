@@ -28,8 +28,7 @@
 }
 .cocktailCardContainer {
     position: relative;
-    width: 350px;
-    min-width: 250px;
+    width: auto;
     height: 500px;
     display: none;
     outline: 0;
@@ -77,4 +76,13 @@
     cursor: pointer;
     outline: 0;
     margin: 40px 0 0 50px;
+}
+
+@media screen and (max-width: 900px) { 
+    .buttonRandom, .chooseButton {
+        font-size: 20px;
+    }
+    .prev, .next {
+        margin: 100px;
+    }
 }

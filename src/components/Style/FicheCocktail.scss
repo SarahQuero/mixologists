@@ -142,3 +142,13 @@ $colorBrownDark: #19191c;
 .blackCard .fiche-cocktail-ingredient li {
   color: #ddd1c6;
 }
+
+@media screen and (max-width: 900px) { 
+  .fiche-cocktail {
+    width: 300px;
+    min-width: 250px;
+  }
+  .fiche-cocktail-image {
+    width: 250px;
+  }
+}

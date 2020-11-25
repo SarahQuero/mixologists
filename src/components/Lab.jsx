@@ -216,7 +216,7 @@ class Lab extends React.Component {
     } = this;
     const { cocktailIng, cocktailList, result, cocktailButton } = state;
     return (
-      <div className="margin">
+      <div className="labcocktail-all margin">
         <div
           className="labcocktail-banner"
           style={{
@@ -237,8 +237,9 @@ class Lab extends React.Component {
           <h2>Game Initialization</h2>
           <p>
             {" "}
-            Step 1 : <strong>Click on Generate Cocktails</strong> to generate 4
-            new cocktails to learn.{" "}
+            <strong>Step 1</strong> :{" "}
+            <strong>Click on Generate Cocktails</strong> to generate 4 new
+            cocktails to learn.{" "}
           </p>
           <p>
             The left and right arrows will allow you to select the cocktail you
@@ -249,8 +250,9 @@ class Lab extends React.Component {
             <strong>by clicking on the Cocktail Card.</strong>
           </p>
           <p>
-            Step 2 : Then, <strong>click on Choose Cocktail</strong> to select
-            the cocktail and start the game.
+            <strong>Step 2</strong> : Then,{" "}
+            <strong>click on Choose Cocktail</strong> to select the cocktail and
+            start the game.
           </p>
         </div>
         <div>
@@ -309,7 +311,7 @@ class Lab extends React.Component {
               Mix
             </button>
           </div>
-          <div className="verreSpacer" />
+          {/* <div className="verreSpacer" /> */}
           <div className="verreWrapper">
             <img src={verreVide} alt="Verre vide" />
             <div className="verreColorWrapper">

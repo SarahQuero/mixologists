@@ -11,20 +11,26 @@ $marron: #846e66;
 $fontStyleh1: "Yesteryear", cursive;
 $fontStylep: "Assistant", sans-serif;
 
+.labcocktail-all {
+    width: 100%;
+}
 .labcocktail-banner {
-    height: 500px;
+    height: 200px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
+  .labcocktail-page-prez {
+      margin: 30px;
+  }
 .labcocktail-page-prez h1 {
     text-align: center;
     font-family: 'Yesteryear', cursive;
     color: $gold;
-    font-size: 5rem;
-    margin: 0px;
+    font-size: 3rem;
+    margin: 10px;
 }
 
 .labcocktail-page-prez h2 {
@@ -32,23 +38,23 @@ $fontStylep: "Assistant", sans-serif;
     font-family: "Assistant", sans-serif;
     color: $gold;
     font-size: 2rem;
-    margin: 0px;
+    margin: 20px;
 }
 
 .labcocktail-page-prez p {
     font-family: "Assistant", sans-serif;
     text-align: center;
+    line-height: 2em;
     color:  #846e66;
-    padding: 20px;
-    font-size: 1.3rem;
+    padding: 0px;
+    font-size: 0.9rem;
   }
 
 .labWrapper {
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    // height: 75vh;
 }
-
 
 .labIngWrapper {
     display: flex;
@@ -118,6 +124,7 @@ $fontStylep: "Assistant", sans-serif;
 
 .verreWrapper {
     position: relative;
+    // height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,31 +150,6 @@ $fontStylep: "Assistant", sans-serif;
     padding: 2px 0;
     color: $black;
 }
-
-
-@media (min-width: 900px) {
-    .labWrapper {
-      flex-direction: row;  
-    }
-    .verreSpacer {
-        display: none;
-    }
-    .labIngWrapper {
-        width: 100%;
-    }
-    .verreWrapper img {
-        width: 45%;
-    }
-    .verreColorWrapper {
-        position: absolute;
-        bottom: 42px;
-        width: 45%;
-    }
-    .verreWrapper img {
-        position: absolute;
-        bottom: 25px;
-    }
-  }
 
 .popup {  
     position: fixed;  
@@ -217,4 +199,43 @@ $fontStylep: "Assistant", sans-serif;
       border: 0;
       outline: 0;
       cursor: pointer;
+  }
+
+  @media (min-width: 900px) {
+    .labcocktail-banner {
+        height: 500px;
+    }
+    .labcocktail-page-prez h1  {
+        font-size: 5rem;
+    }
+    .labcocktail-page-prez h2  {
+        font-size: 3rem;
+    }
+    .labcocktail-page-prez p {
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+
+    .labWrapper {
+      flex-direction: row;  
+    }
+    .verreSpacer {
+        display: none;
+    }
+    .labIngWrapper {
+        width: 100%;
+    }
+    .verreWrapper img {
+        width: 45%;
+    }
+    .verreColorWrapper {
+        position: absolute;
+        bottom: 42px;
+        width: 45%;
+    }
+
+    .verreWrapper img {
+        position: absolute;
+        bottom: 25px;
+    }
   }
