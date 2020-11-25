@@ -11,17 +11,26 @@ import Footer from "./components/Footer";
 import "./App.scss";
 
 function App() {
-  const [blockAge, setBlockAge] = useState(true);
+  const [blockAge, setBlockAge] = useState(localStorage.getItem("cockAcces"));
+  const [accesDenied, setAccesDenied] = useState(false);
   useEffect(() => {
-    if (blockAge) {
+    if (blockAge !== "true") {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "visible";
     }
+    localStorage.setItem("cockAcces", blockAge);
   }, [blockAge]);
+  const accesDeniedFunc = () => {
+    setAccesDenied(true);
+    setTimeout(() => {
+      setAccesDenied(false);
+    }, 10000);
+  };
+
   return (
     <div className="App">
-      {!blockAge ? (
+      {blockAge === "true" ? (
         <div>
           <NavBar />
           <Switch>
@@ -43,16 +52,26 @@ function App() {
               <h1>Welcome</h1>
               <h2>Are you of legal drinking age?</h2>
               <div className="buttonWrapper">
-                <button
-                  onClick={() => {
-                    setBlockAge(false);
-                  }}
-                  type="button"
-                >
+                <button onClick={() => setBlockAge("true")} type="button">
                   Yes
                 </button>
-                <button type="button">No</button>
+                <button onClick={accesDeniedFunc} type="button">
+                  No
+                </button>
               </div>
+              {accesDenied && (
+                <div className="accesDenied">
+                  <img
+                    src="https://img.icons8.com/fluent/48/000000/cancel-2.png"
+                    alt="denied"
+                  />
+                  ACCES DENIED FOR THIS WEB SITE
+                  <img
+                    src="https://img.icons8.com/fluent/48/000000/cancel-2.png"
+                    alt="denied"
+                  />
+                </div>
+              )}
               <img
                 className="imgInt"
                 src="https://i.ibb.co/zbPyQZW/logo-experimentalcocktail.png"
