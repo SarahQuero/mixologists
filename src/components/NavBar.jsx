@@ -1,92 +1,85 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Style/NavBar.scss";
 import PropTypes from "prop-types";
 
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuOpen: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+function NavBar({ short }) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  handleClick() {
-    const { menuOpen } = this.state;
-    this.setState({ menuOpen: !menuOpen });
-  }
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [menuOpen]);
 
-  render() {
-    const { menuOpen } = this.state;
-    const { short } = this.props;
-    return (
-      <div>
-        <nav>
-          <div className="navElements">
-            <img
-              className="logoNavBar"
-              src="https://i.ibb.co/zbPyQZW/logo-experimentalcocktail.png"
-              alt="logo"
-            />
-            {!short && (
-              <div className="menuBurgerContainer">
-                <div
-                  role="button"
-                  tabIndex="-1"
-                  className={menuOpen ? "menuBurger open" : "menuBurger"}
-                  onClick={this.handleClick}
-                  onKeyDown={this.handleClick}
-                >
-                  <span className="menuBars" />
-                </div>
-                <h2 id="titleMenu">MENU</h2>
+  return (
+    <div>
+      <nav>
+        <div className="navElements">
+          <img
+            className="logoNavBar"
+            src="https://i.ibb.co/zbPyQZW/logo-experimentalcocktail.png"
+            alt="logo"
+          />
+          {!short && (
+            <div className="menuBurgerContainer">
+              <div
+                role="button"
+                tabIndex="-1"
+                className={menuOpen ? "menuBurger open" : "menuBurger"}
+                onClick={() => setMenuOpen(!menuOpen)}
+                onKeyDown={() => setMenuOpen(!menuOpen)}
+              >
+                <span className="menuBars" />
               </div>
-            )}
-          </div>
-        </nav>
-        <div id="menu" className={menuOpen ? "menuOpen" : "menuClose"}>
-          <ul>
-            <li>
-              <Link to="/" onClick={this.handleClick}>
-                HOME
-              </Link>
-            </li>
-            <span className="lineMenu" />
-            <li>
-              <Link to="/Recipes" onClick={this.handleClick}>
-                RECIPES
-              </Link>
-            </li>
-            <span className="lineMenu" />
-            <li>
-              <Link to="/Lab" onClick={this.handleClick}>
-                LAB COCKTAIL
-              </Link>
-            </li>
-            <span className="lineMenu" />
-            <li>
-              <Link to="/World" onClick={this.handleClick}>
-                AROUND THE WORLD
-              </Link>
-            </li>
-            <span className="lineMenu" />
-            <li>
-              <Link to="/Box" onClick={this.handleClick}>
-                OUR BOXES
-              </Link>
-            </li>
-            <span className="lineMenu" />
-            <li>
-              <Link to="/Contact" onClick={this.handleClick}>
-                CONTACT
-              </Link>
-            </li>
-          </ul>
+              <h2 id="titleMenu">MENU</h2>
+            </div>
+          )}
         </div>
+      </nav>
+      <div id="menu" className={menuOpen ? "menuOpen" : "menuClose"}>
+        <ul>
+          <li>
+            <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>
+              HOME
+            </Link>
+          </li>
+          <span className="lineMenu" />
+          <li>
+            <Link to="/Recipes" onClick={() => setMenuOpen(!menuOpen)}>
+              RECIPES
+            </Link>
+          </li>
+          <span className="lineMenu" />
+          <li>
+            <Link to="/Lab" onClick={() => setMenuOpen(!menuOpen)}>
+              LAB COCKTAIL
+            </Link>
+          </li>
+          <span className="lineMenu" />
+          <li>
+            <Link to="/World" onClick={() => setMenuOpen(!menuOpen)}>
+              AROUND THE WORLD
+            </Link>
+          </li>
+          <span className="lineMenu" />
+          <li>
+            <Link to="/Box" onClick={() => setMenuOpen(!menuOpen)}>
+              OUR BOXES
+            </Link>
+          </li>
+          <span className="lineMenu" />
+          <li>
+            <Link to="/Contact" onClick={() => setMenuOpen(!menuOpen)}>
+              CONTACT
+            </Link>
+          </li>
+        </ul>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 NavBar.propTypes = {

@@ -11,6 +11,11 @@ function Box() {
   const [selectedBox, setSelectedBox] = useState(null);
 
   useEffect(() => {
+    if (selectedBox !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
     const array = [];
     const fetchData = async () => {
       const result = await axios.get(
@@ -22,7 +27,7 @@ function Box() {
       setCocktailList(array);
     };
     fetchData();
-  }, []);
+  }, [selectedBox]);
 
   console.log(selectedBox);
   return (
