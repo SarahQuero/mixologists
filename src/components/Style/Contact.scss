@@ -1,0 +1,68 @@
+.contact-form {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-form {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.fields-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+}
+.fields-form h1 {
+    font-family: "Yesteryear", cursive;
+    color: #cbb075;
+    font-size: 60px;
+}
+.fields-form button {
+    margin: 30px;
+    font-family: "Yesteryear", cursive;
+    color: #cbb075;
+    font-size: 30px;
+}
+.fields-form input {
+    margin: 20px 0;
+    border:none;
+    border-bottom: 1px solid grey;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.fields-form textarea {
+    border:none;
+    border-bottom: 1px solid grey;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.submit-form {
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #19191c;
+    color: #cbb075;
+    font-size: 25px;
+    font-family: "Assistant", sans-serif;
+    cursor: pointer;
+    outline: 0;
+    margin: 40px 0 0 10px;
+}
+
+.fields-form ::placeholder { 
+    color: #19191c;
+  }
