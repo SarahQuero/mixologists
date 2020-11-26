@@ -7,6 +7,8 @@ import cocktailRecipe from "../../public/assets/cocktail-recipe.jpg";
 class Recipes extends React.Component {
   state = {
     cocktails: [],
+    popular: true,
+    reseach: [],
   };
 
   componentDidMount() {
@@ -60,8 +62,29 @@ class Recipes extends React.Component {
       });
   };
 
+  search = (e) => {
+    if (e.target.value.trim() === "") {
+      this.setState({ popular: true });
+      return;
+    }
+    this.setState({ popular: false });
+    const tabtemp = [];
+    axios
+      .get(
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${e.target.value.trim()}`
+      )
+      .then((res) => res.data)
+      .then((data) => {
+        data.drinks.forEach((el) => {
+          const ing = this.getAllIngre(el);
+          tabtemp.push({ infoCock: el, infoIng: ing });
+        });
+        this.setState({ reseach: tabtemp });
+      });
+  };
+
   render() {
-    const { cocktails } = this.state;
+    const { cocktails, popular, reseach } = this.state;
     return (
       <div className="recipe-page margin">
         <div
@@ -92,21 +115,37 @@ class Recipes extends React.Component {
             <strong>Click on each cocktail card to discover its Recipe.</strong>
           </p>
         </div>
-        {cocktails.length === 0 ? (
+        <div className="searchBarWrapper">
+          <h3>Search a cocktail</h3>
+          <input type="text" onChange={this.search} placeholder="Search" />
+        </div>
+        {cocktails.length === 0 && popular ? (
           <div> Loading ... </div>
         ) : (
           <div className="fichesCocktailAll">
-            {cocktails.map((cocktail) => (
-              <div
-                className="ficheCocktailSimple"
-                key={cocktail.infoCock.idDrink}
-              >
-                <FicheCocktail
-                  cocktail={cocktail.infoCock}
-                  infoIng={cocktail.infoIng}
-                />
-              </div>
-            ))}
+            {popular
+              ? cocktails.map((cocktail) => (
+                  <div
+                    className="ficheCocktailSimple"
+                    key={cocktail.infoCock.idDrink}
+                  >
+                    <FicheCocktail
+                      cocktail={cocktail.infoCock}
+                      infoIng={cocktail.infoIng}
+                    />
+                  </div>
+                ))
+              : reseach.map((cocktail) => (
+                  <div
+                    className="ficheCocktailSimple"
+                    key={cocktail.infoCock.idDrink}
+                  >
+                    <FicheCocktail
+                      cocktail={cocktail.infoCock}
+                      infoIng={cocktail.infoIng}
+                    />
+                  </div>
+                ))}
           </div>
         )}
       </div>
