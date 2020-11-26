@@ -1,0 +1,58 @@
+$colorBrownLight: #DDD1C6;
+$colorBrownDark: #19191C;
+
+$colorGold: #CBB075;
+$colorBrown: #846E66;
+
+.presBoxesCard {
+    background-color: #19191C;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.75);
+
+}
+.presBoxesCard h3 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    font-weight: 100;
+    color: #CBB075;
+}
+.presBoxesImg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+.boxesButtonAcces {
+    padding: 15px 50px 15px 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Assistant", sans-serif;
+    font-size: 30px;
+    background-color: $colorGold;
+    color: $colorBrownDark;
+    outline-width: 0;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 928px) {
+    .presBoxesCard{
+        width: 300px;
+        height: 400px;
+    }
+    .presBoxesImg {
+        width: 150px;
+        height: 150px;
+    }
+    .presBoxesCard h3 {
+        font-size: 50px;
+    }
+}

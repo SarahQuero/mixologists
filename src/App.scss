@@ -1,0 +1,144 @@
+
+$fontStyleh1: "Yesteryear", cursive;
+$fontStylep: "Assistant", sans-serif;
+
+// Color definition for text
+$colorGold: #CBB075;
+$colorBrown: #846E66;
+
+//Color definition for background
+$colorBrownLight: #DDD1C6;
+$colorBrownDark: #19191C;
+
+// Elements principaux de la page
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.margin {
+  margin-top: 95px;
+  width: 100%;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+  .margin {
+    margin-top: 65px;
+  }
+}
+
+.wrapperInt {
+  background-color: #CBB075;
+  margin: 50px 15%;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.bodyInt {
+  overflow: hidden;
+  background-color: $colorBrownDark;
+  height: 100vh;
+}
+
+.wrapperInt h1 {
+  margin-bottom: 15px;
+  font-size: 75px;
+  font-family: 'Yesteryear', cursive;
+}
+
+.wrapperInt h2 {
+  font-size: 25px;
+  font-family: "Assistant", sans-serif;
+}
+
+.wrapperInt button {
+  font-family: "Assistant", sans-serif;
+  padding: 5px 40px;
+  width: 35%;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #19191C;
+  color: #DDD1C6;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  outline: none;
+}
+
+.wrapperInt button:hover{
+  color: #CBB075;
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,0.75);
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.accesDenied {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.imgInt {
+  filter: brightness(0%);
+  max-width: 50%;
+}
+
+.searchBarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.searchBarWrapper h3 {
+  margin-bottom: 12px;
+  font-family: 'Yesteryear', cursive;
+  font-size: 45px;
+  color: $colorGold;
+}
+
+.searchBarWrapper input  {
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  padding: 2px 8px;
+  font-size: 38px;
+  font-family: 'Yesteryear', cursive;
+}
+
+@media (min-width:800px) {
+  .imgInt {
+    max-width: 50%;
+  }
+}
+
+@media (max-width:500px) {
+  .wrapperInt button {
+    margin: 10px;
+  }
+}
+
+

@@ -1,0 +1,65 @@
+.imgHome {
+    background-image: url("../../../public/assets/homeImg.webp");
+    height: 90vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introContainer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #19191c;
+    color: #CBB075;
+    width: 100%;
+}
+.introContainer h1 {
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    font-size: 60px;
+    font-weight: 100;
+}
+.introContainer p {
+    font-family: "Assistant", sans-serif;
+    font-size: 35px;
+    padding: 35px;
+}
+.logoIntro{
+    background-image: url("../../../public/assets/logo2.png");
+    width: 50%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    .introContainer {
+        padding: 20px;
+    }
+    .introContainer p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .introContainer h1 {
+        font-size: 45px;
+    }
+    .logoIntro{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width : 1185px) {
+    .imgHome {
+        height: 50vh;
+        background-position: center center;
+    }
+}

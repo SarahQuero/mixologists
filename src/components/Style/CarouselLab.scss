@@ -1,0 +1,100 @@
+.carouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // height: 100vh;
+    outline: 0;
+}
+.carouselCocktailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev, .next {
+    cursor: pointer;
+    width: auto;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    color:  #cbb075;
+    outline: 0;
+    padding: 30px;
+    z-index: 12;
+}
+
+.prev{
+    margin: 50px 50px 50px 0;
+}
+.next {
+    margin: 50px 0px 50px 50px;
+
+}
+.slide {
+    animation: slide 1.3s ease;
+}
+.cocktailCardContainer {
+    position: relative;
+    width: auto;
+    height: 500px;
+    display: none;
+    outline: 0;
+
+}
+.buttonRandom {
+    padding: 20px 25px 20px 25px;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+    background-color: #cbb075;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: "Assistant", sans-serif;
+    cursor: pointer;
+}
+@keyframes slide {
+    from {
+        transform: translateX(-200px);
+        background-color: transparent;
+    } to {
+        transform: translate(0px);
+        background-color: white;
+    }
+}
+.chooseButton {
+    padding: 20px 25px 20px 25px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #cbb075;
+    font-size: 25px;
+    font-family: "Assistant", sans-serif;
+    cursor: pointer;
+    outline: 0;
+    margin: 40px 0 0 10px;
+}
+.buttonFalse {
+    padding: 20px 25px 20px 25px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #19191c;
+    color: #cbb075;
+    font-size: 25px;
+    font-family: "Assistant", sans-serif;
+    cursor: pointer;
+    outline: 0;
+    margin: 40px 0 0 10px;
+}
+
+@media screen and (max-width: 900px) { 
+    .buttonRandom, .chooseButton, .buttonFalse {
+        font-size: 15px;
+    }
+    .chooseButton, .buttonFalse {
+        margin: 20px 0 0 0px;
+    }
+    .prev, .next {
+        padding: 25px;
+    }
+}

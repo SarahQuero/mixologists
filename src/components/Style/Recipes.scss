@@ -1,0 +1,74 @@
+// Font family
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+
+$fontStyleh1: "Yesteryear", cursive;
+$fontStylep: "Assistant", sans-serif;
+
+// Color definition for text
+$colorGold: #cbb075;
+$colorBrown: #846e66;
+
+//Color definition for background
+$colorBrownLight: #ddd1c6;
+$colorBrownDark: #19191c;
+
+.recipe-page {
+  width: 100%;
+  background-color: $colorBrownLight;
+}
+
+.recipe-page-prez {
+  margin: 0px 50px;
+}
+
+.cocktail-recipe {
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.recipe-page-prez h1 {
+  text-align: center;
+  font-family: 'Yesteryear', cursive;
+  color: $colorGold;
+  font-size: 5rem;
+  margin: 30px;
+}
+.recipe-page-prez p {
+  font-family: "Assistant", sans-serif;
+  text-align: justify;
+  color:  #846e66;
+  padding: 35px;
+  font-size: 1.3rem;
+}
+
+.fichesCocktailAll {
+  padding: 40px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ficheCocktailSimple {
+  position: relative;
+  width: 350px;
+  min-width: 250px;
+  height: 500px;
+  margin: 40px;
+}
+
+@media screen and (max-width: 900px) { 
+  .cocktail-recipe {
+    height: 200px;
+  }
+  .recipe-page-prez h1 {
+    font-size: 3rem;
+  }
+  .recipe-page-prez p {
+    padding: 0px;
+    font-size: 0.9rem;
+  }
+}

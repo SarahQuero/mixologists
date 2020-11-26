@@ -1,0 +1,49 @@
+// Font family 
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+$fontStyleh1: "Yesteryear", cursive;
+$fontStylep: "Assistant", sans-serif;
+$fontStyleFooter: 'Pacifico', cursive;
+
+// Color definition for text
+$colorGold: #CBB075;
+$colorBrown: #846E66;
+
+//Color definition for background
+$colorBrownLight: #DDD1C6;
+$colorBrownDark: #19191C;
+
+footer {
+  width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colorGold;
+    height: 80px;
+    padding: 20px
+}
+
+.contact-us a {
+  font-family: $fontStyleFooter;
+  font-weight: 200; 
+  font-size: 1.5rem;
+  margin: 40px;
+  text-align: center;
+}
+
+.footer-social-medias .icons {
+  margin: 4px; 
+}
+
+@media screen and (max-width: 768px) {
+  .contact-us a {
+    margin: 20px;
+    font-size: 18px;
+  }
+}

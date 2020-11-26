@@ -1,0 +1,167 @@
+// Font family
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+
+$fontStyleh1: "Yesteryear", cursive;
+$fontStylep: "Assistant", sans-serif;
+
+// Color definition for text
+$colorGold: #cbb075;
+$colorBrown: #846e66;
+
+//Color definition for background
+$colorBrownLight: #ddd1c6;
+$colorBrownDark: #19191c;
+
+.fiche-cocktail {
+  display: flex;
+  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid $colorGold;
+  border-radius: 10px;
+  box-shadow: -15px 0px 25px $colorBrownLight;
+  width: 350px;
+  min-width: 250px;
+  height: 500px;
+  padding: 10px;
+  // margin: 10px;
+  padding: 20px;
+  overflow: hidden;
+  outline: 0;
+}
+
+.blackCard {
+  background-color: #19191c;
+  box-shadow: -15px 0px 25px $colorBrownDark;
+}
+
+.fiche-cocktail-main {
+  position: relative;
+  width: 200px;
+  height: 400px;
+}
+.fiche-cocktail-title h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: $colorGold;
+  font-family: $fontStyleh1;
+}
+.fiche-cocktail p {
+  text-align: justify;
+  color: #19191c;
+}
+
+.blackCard p {
+  color: #ddd1c6;
+}
+
+  //Verso (Face)
+.fiche-cocktail.verso {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.fiche-cocktail-title.verso {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-gap: 20px;
+}
+//Recto (Derrière)
+.fiche-cocktail.recto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.fiche-cocktail-title.recto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fiche-cocktail-icone {
+  width: 25%;
+}
+
+.fiche-cocktail-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border: 2px solid $colorGold;
+  border-radius: 10px;
+  box-shadow: -15px 0px 25px $colorBrownLight;
+}
+
+.blackCard .fiche-cocktail-image {
+  box-shadow: -15px 0px 25px $colorBrownDark;
+}
+
+.fiche-cocktail-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fiche-cocktail-recipe {
+  display: flex;
+  flex-direction: column;
+}
+.fiche-cocktail-recipe p {
+  font-family: $fontStylep;
+  font-size: 0.8em;
+}
+.fiche-cocktail-ingredient p {
+  font-family: $fontStylep;
+  font-size: 1em;
+}
+.fiche-cocktail-ingredient h2, .fiche-cocktail-recipe h2 {
+  font-family: $fontStyleh1;
+  color: $colorGold;
+  text-align: center;
+  font-size: 2em;
+}
+.fiche-cocktail-ingredient ul {
+  font-family: $fontStylep;
+  font-size: 1em;
+  margin: 0;
+  list-style: none;
+}
+.fiche-cocktail-ingredient li {
+  font-family: $fontStylep;
+  font-size: 0.8em;
+}
+
+.blackCard .fiche-cocktail-ingredient li {
+  color: #ddd1c6;
+}
+
+@media screen and (max-width: 900px) { 
+  .fiche-cocktail {
+    width: 280px;
+    min-width: 250px;
+    height: 450px;
+  }
+  .fiche-cocktail-image {
+    width: 240px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 350px) { 
+  .fiche-cocktail {
+    width: 240px;
+    max-width: 200px;
+    height: 450px;
+  }
+  .fiche-cocktail-image {
+    width: 200px;
+    height: 280px;
+  }
+}
