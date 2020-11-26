@@ -33,7 +33,7 @@ class LabResult extends React.Component {
 }
 
 LabResult.propTypes = {
-  displayResult: PropTypes.string.isRequired,
+  displayResult: PropTypes.func.isRequired,
   message: PropTypes.string.isRequired,
 };
 
