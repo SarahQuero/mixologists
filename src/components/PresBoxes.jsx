@@ -25,7 +25,7 @@ class PresBoxes extends React.Component {
         fetch("https://www.thecocktaildb.com/api/json/v2/9973533/popular.php")
           .then((response) => response.json())
           .then((data2) => {
-            for (let i = 0; i < 5; i += 1) {
+            for (let i = 0; i < 2; i += 1) {
               arrayCocktail.push(data2.drinks[i]);
             }
             this.setState({ cocktailBox: arrayCocktail });
