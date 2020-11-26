@@ -117,7 +117,8 @@ class Recipes extends React.Component {
           </p>
         </div>
         <div className="searchBarWrapper">
-          <input type="text" onChange={this.search} />
+          <h3>Search a cocktail</h3>
+          <input type="text" onChange={this.search} placeholder="Search" />
         </div>
         {cocktails.length === 0 && popular ? (
           <div> Loading ... </div>

@@ -109,6 +109,31 @@ a {
   max-width: 50%;
 }
 
+.searchBarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.searchBarWrapper h3 {
+  margin-bottom: 12px;
+  font-family: 'Yesteryear', cursive;
+  font-size: 45px;
+  color: $colorGold;
+}
+
+.searchBarWrapper input  {
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  padding: 2px 8px;
+  font-size: 38px;
+  font-family: 'Yesteryear', cursive;
+}
+
 @media (min-width:800px) {
   .imgInt {
     max-width: 50%;
