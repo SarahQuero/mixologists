@@ -90,11 +90,20 @@
     font-family: "Assistant", sans-serif;
 }
 
+#thank-message {
+    font-size: 30px;
+    color: #19191c;
+    text-shadow: none;
+}
+
   @media screen and (max-width: 900px) { 
 .fields-form h1 {
     font-size: 40px;
 }
 .fields-form {
     width: 70%;
+}
+#thank-message {
+    font-size: 25px;
 }
 }

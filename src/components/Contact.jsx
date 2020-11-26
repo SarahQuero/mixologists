@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import PopupContact from "./PopupContact";
 import "./Style/Contact.scss";
+import "./Style/Lab.scss";
 import contactImage from "../../public/assets/contact-image.jpg";
 
 const Contact = () => {
@@ -109,11 +111,34 @@ const Contact = () => {
               placeholder="&darr; Tell us what you think of our website and how we could improve your experience &darr; "
               onChange={(e) => setComment(e.target.value)}
             />
-            <div>
-              <button className="submit-form" type="submit">
-                Submit
-              </button>
-            </div>
+            <p>
+              <PopupContact
+                toggle={(show) => (
+                  <button className="submit-form" type="submit" onClick={show}>
+                    Submit
+                  </button>
+                )}
+                content={(hide) => (
+                  <div className="popup">
+                    <div className="popup-inner">
+                      <h1 id="thank-message">
+                        {" "}
+                        Your form has been successfully submitted.
+                      </h1>
+                      <div>
+                        <button
+                          className="popup-bottom"
+                          type="button"
+                          onClick={hide}
+                        >
+                          Close me
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              />
+            </p>
           </div>
         </form>
       </div>
