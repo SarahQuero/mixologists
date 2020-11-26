@@ -1,5 +1,4 @@
 import React from "react";
-import "./Style/Home.scss";
 import PresCard from "./PresCard";
 import Intro from "./Intro";
 import Team from "./Team";
