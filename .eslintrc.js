@@ -25,5 +25,6 @@ module.exports = {
     "react/no-unescaped-entities": 0,
     "react/jsx-props-no-spreading": 0,
     "react/no-array-index-key": 0,
+    "react/jsx-indent": 0,
   },
 };
