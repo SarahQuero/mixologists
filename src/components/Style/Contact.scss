@@ -4,6 +4,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.contact-form-content {
+    background-color:hsla(0, 9%, 82%, 0.3);
+}
 .main-form {
     display: flex;
     justify-content: center;
@@ -19,7 +22,8 @@
 .fields-form h1 {
     font-family: "Yesteryear", cursive;
     color: #cbb075;
-    font-size: 60px;
+    font-size: 65px;
+    text-shadow: -3px 0px 5px rgba(150, 150, 150, 0.82);
 }
 .fields-form button {
     margin: 30px;
@@ -79,8 +83,12 @@
 .fields-form ::placeholder { 
     color: #19191c;
     font-size: 15px;
+    font-family: "Assistant", sans-serif;
   }
 
+.favourite-cock-choice p, .radio-buttom-field label {
+    font-family: "Assistant", sans-serif;
+}
 
   @media screen and (max-width: 900px) { 
 .fields-form h1 {
