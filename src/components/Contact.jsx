@@ -105,7 +105,7 @@ const Contact = () => {
           <textarea
             type="text"
             value={comment}
-            placeholder="Tell us what you think of our website and how we could improve your experience "
+            placeholder="&darr; Tell us what you think of our website and how we could improve your experience &darr; "
             onChange={(e) => setComment(e.target.value)}
           />
           <div>
