@@ -76,7 +76,6 @@ class Recipes extends React.Component {
       .then((res) => res.data)
       .then((data) => {
         data.drinks.forEach((el) => {
-          console.log(el);
           const ing = this.getAllIngre(el);
           tabtemp.push({ infoCock: el, infoIng: ing });
         });
