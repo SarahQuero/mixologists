@@ -28,7 +28,7 @@
     "react-globe": "^5.0.2",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
-    "three": "^0.122.0"
+    "three": "^0.123.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
