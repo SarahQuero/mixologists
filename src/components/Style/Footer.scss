@@ -31,9 +31,10 @@ footer {
 
 .contact-us a {
   font-family: $fontStyleFooter;
-  font-weight: bold; 
+  font-weight: 200; 
   font-size: 1.5rem;
   margin: 40px;
+  text-align: center;
 }
 
 .footer-social-medias .icons {
@@ -43,5 +44,6 @@ footer {
 @media screen and (max-width: 768px) {
   .contact-us a {
     margin: 20px;
+    font-size: 18px;
   }
 }

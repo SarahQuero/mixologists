@@ -125,13 +125,14 @@ function World() {
             height: "100vh",
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <FicheCocktail cocktail={cock} infoIng={getAllIngre(cock)} black />
         </div>
       )}
       <ReactGlobe
-        height="75.5vh"
+        height="82vh"
         markers={markers}
         options={{ markerTooltipRenderer }}
         width="100vw"
