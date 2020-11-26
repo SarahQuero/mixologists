@@ -135,7 +135,7 @@ function World() {
         height="82vh"
         markers={markers}
         options={{ markerTooltipRenderer }}
-        width="100vw"
+        width="100%"
         onClickMarker={onClickMarker}
         onDefocus={onDefocus}
       />
