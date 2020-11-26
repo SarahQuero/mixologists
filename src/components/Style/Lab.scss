@@ -1,0 +1,273 @@
+$black: #19191c;
+$gold: #cbb075;
+$white: #ddd1c6;
+$marron: #846e66;
+
+
+// Font family
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Yesteryear&display=swap");
+
+$fontStyleh1: "Yesteryear", cursive;
+$fontStylep: "Assistant", sans-serif;
+
+.labcocktail-all {
+    width: 100%;
+}
+.labcocktail-banner {
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .labcocktail-page-prez {
+      margin: 30px;
+  }
+.labcocktail-page-prez h1 {
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    color: $gold;
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.labcocktail-page-prez h2 {
+    text-align: center;
+    font-family: "Assistant", sans-serif;
+    color: $gold;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.labcocktail-page-prez p {
+    font-family: "Assistant", sans-serif;
+    text-align: center;
+    line-height: 2em;
+    color:  #846e66;
+    padding: 0px;
+    font-size: 0.9rem;
+  }
+
+.labWrapper {
+    display: flex;
+    flex-direction: column;
+    // height: 75vh;
+}
+
+.labIngWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $black;
+    color: $gold;
+}
+
+.labIngWrapper h1 {
+  font-family: "Yesteryear", cursive;
+  font-size: 40px;
+  margin: 10px;
+  text-align: center;
+}
+
+.labIngWrapper h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: 35px;
+}
+
+.labIngWrapper ul {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+    width: auto;
+}
+
+.labIngWrapper ul li {
+    font-family: "Assistant", sans-serif;
+    font-size: 10px;
+    margin: 8px;
+    border: 2px $gold solid;
+    padding: 5px;
+    list-style-type: none;
+    user-select: none;
+    transition: ease 0.5s;
+    border-radius: 10px;
+    outline: 0;
+    text-align: center;
+}
+
+.labIngWrapper ul li:hover {
+    cursor: pointer;
+}
+
+.liclicked {
+    transition: ease 0.5s;
+    background-color: $gold;
+    color: $black;
+}
+
+.labIngWrapper button {
+    font-family: "Assistant", sans-serif;
+    padding: 6px 50px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    background-color: $gold;
+    color: $black;
+    border: 0;
+    border-radius: 10px;
+}
+
+.verreSpacer {
+    height: 30px;
+    width: 100%;
+    background-color: $white;
+}
+
+.verreWrapper {
+    position: relative;
+    // height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: $white;
+    overflow: hidden;
+}
+
+.verreWrapper img {
+    width: 50%;
+}
+
+.verreColorWrapper {
+    position: absolute;
+    bottom: 35px;
+    width: 45%;
+}
+
+.verreColorWrapper div {
+    font-family: "Assistant", sans-serif;
+    text-align: center;
+    padding: 5px 0;
+    color: $black;
+    font-size: 10px;
+}
+
+.popup {  
+    position: fixed;  
+    z-index: 16;
+    width: 100%;  
+    height: 100%;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    margin: auto;  
+    background-color: rgba(0,0,0, 0.5);  
+  }  
+  .popup-inner {  
+    position: absolute;  
+    left: 25%;  
+    right: 25%;  
+    top: 25%;  
+    bottom: 25%;  
+    margin: auto;  
+    border-radius: 20px;
+    height:200px;  
+    background: $gold;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .popup-inner-text {
+      margin: 20px;
+  }
+  .popup-inner-text h1 {
+      font-family: $fontStyleh1;
+      color: $black;
+      text-align: center;
+      font-size: 15px;
+  }
+  .popup-bottom {
+      border-radius: 10px;
+      background-color: $black;
+      font-size: 18px;
+      font-family: $fontStylep;
+      font-weight: bold;
+      color: $gold;
+      width: 150px;
+      height: 40px;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .verreWrapper img {
+        width: 30%;
+    }
+    
+    .verreColorWrapper {
+        width: 25%;
+    }
+    .popup-inner-text h1 {
+        font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .labcocktail-banner {
+        height: 500px;
+    }
+    .labcocktail-page-prez h1  {
+        font-size: 5rem;
+    }
+    .labcocktail-page-prez h2  {
+        font-size: 3rem;
+    }
+    .labcocktail-page-prez p {
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+
+    .labWrapper {
+      flex-direction: row;  
+    }
+    
+    .labIngWrapper h1 {
+        font-size: 60px;
+      }
+    
+    .verreSpacer {
+        display: none;
+    }
+    .labIngWrapper {
+        width: 100%;
+    }
+    .labIngWrapper ul li {
+        font-size: 22px;
+    }
+    .verreColorWrapper {
+        position: absolute;
+        bottom: 42px;
+        width: 45%;
+    }
+
+    .verreColorWrapper div {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+    .verreWrapper img {
+        position: absolute;
+        bottom: 25px;
+    }
+    .popup-inner-text h1 {
+        font-size: 30px;
+    }
+  }
