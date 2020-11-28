@@ -12,9 +12,6 @@ const Contact = () => {
   const [comment, setComment] = useState("");
 
   const handleSubmit = (e) => {
-    console.log(
-      `Dear ${firstName} ${lastName}, your form has been successfully submitted.`
-    );
     e.preventDefault();
     setFirstName("");
     setLastName("");
