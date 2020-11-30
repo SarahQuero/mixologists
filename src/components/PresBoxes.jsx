@@ -40,10 +40,9 @@ class PresBoxes extends React.Component {
         <div className="presBoxesContainer">
           <h1>Our Boxes</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-            deleniti ducimus possimus ad dolore iusto! Repudiandae atque eius
-            quaerat neque itaque voluptatum reiciendis qui rem, repellat vero
-            totam. Ab, adipisci!
+            In this section, you will be able to discover our box offer. Each
+            box is dedicated to a special cocktail and contains all the material
+            and ingredient to make your cocktails directly at home
           </p>
           <div className="presBoxesCardContainer">
             {cocktailBox.map((el) => (

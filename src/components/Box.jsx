@@ -37,10 +37,9 @@ function Box() {
         <div className="BoxTop">
           <h1>Our boxes</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-            magni velit atque sit architecto quisquam, ipsam error et earum
-            deleniti. Animi pariatur laudantium dolorem mollitia eligendi ea
-            tenetur ut libero.
+            In this section, you will be able to discover our box offer. Each
+            box is dedicated to a special cocktail and contains all the material
+            and ingredient to make your cocktails directly at home.
           </p>
         </div>
         {selectedBox && (

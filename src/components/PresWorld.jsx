@@ -8,10 +8,9 @@ function presWorld() {
       <div className="presWorldContainer">
         <h1>Around The World</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          libero optio harum voluptatem a dolorem, reprehenderit odio neque
-          consequuntur eum possimus impedit voluptatum soluta deleniti nemo
-          labore obcaecati vitae atque!
+          Let's travel with us and discover the cocktails from all around the
+          World. We have selected for you our best cocktails in countries where
+          we've traveled and that we would like to share with you.
         </p>
         <div className="presWorldImgContainer">
           <div className="presWorldImg" />

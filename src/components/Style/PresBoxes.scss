@@ -19,7 +19,8 @@ $colorBrown: #846e66;
 }
 .presBoxesContainer p {
   font-family: "Assistant", sans-serif;
-  font-size: 35px;
+  font-size: 1.5rem;
+  text-align: center;
   padding: 35px;
 }
 .presBoxesCardContainer {
@@ -49,9 +50,14 @@ $colorBrown: #846e66;
   .presBoxesContainer {
     padding: 10px;
   }
+  .presBoxesContainer h1 {
+    font-size: 3rem;
+  }
   .presBoxesContainer p {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1352px) {

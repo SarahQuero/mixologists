@@ -35,7 +35,7 @@
     font-family: "Assistant", sans-serif;
     font-size: 1.5rem;
     padding: 35px;
-    text-align: justify;
+    text-align: center;
 }
 .logoIntro{
     background-image: url("../../../public/assets/logo2.png");
@@ -95,12 +95,17 @@
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
+    .imgHome h1 {
+        font-size: 4rem;
+    }
+    
     .introContainer {
         padding: 20px;
     }
     .introContainer p {
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
+        padding: 10px;
     }
     .introContainer h1 {
         font-size: 45px;
@@ -110,11 +115,16 @@
         height: 250px;
     }
     .teamContainer {
-        padding: 20px;
+        padding: 10px;
+    }
+    .teamContainer h1 {
+        font-size: 3rem;
     }
     .teamContainer p {
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
+        padding: 10px;
+        margin-bottom: 40px;
     }
 }
 @media only screen and (min-width: 320px) and (max-width : 1185px) {
