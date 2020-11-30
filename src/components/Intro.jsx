@@ -1,19 +1,26 @@
 import React from "react";
-import "./Style/Intro.scss";
+import "./Style/Home.scss";
 
 function Intro() {
   return (
     <>
       <div className="imgHome">
-        <div className="logoIntro" />
+        {/* <div className="logoIntro" /> */}
+        <h1>Experimental Cocktail Club</h1>
       </div>
       <div className="introContainer">
-        <h1>Want something to drink?</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-          omnis culpa soluta quasi maiores nihil magnam ducimus placeat.
-          Sapiente soluta sed voluptatem omnis ab iste provident nemo ex
-          inventore labore.
+          As our habits has recently changed and as the idea of going in a bar
+          and enjoying a fine cocktail is now submitted to restrictions all
+          around the world, we have decided to offer you a virtual cocktail bar
+          that you can enjoy directly from your house.
+          <br /> <br />
+          Within our website, you will be able to discover a list of all the
+          most exquisite and delicious cocktails. We have also created a Lab
+          Cocktail where you will learn to make your own cocktails. Also, we
+          will make you travel with us by discovering cocktails all around the
+          world. Finally, if you found a cocktail you would like to try at home,
+          you'll be able to purchase one of our cocktail boxes. <br />
         </p>
       </div>
     </>

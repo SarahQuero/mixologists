@@ -10,10 +10,7 @@ import PresBoxes from "./PresBoxes";
 const presList = [
   {
     title: "Recipes",
-    descMain: `Deserunt ad ea fugiat officia consectetur exercitation excepteur dolore
-    excepteur cillum labore quis. Excepteur est sit voluptate laboris. Laborum
-    commodo laborum voluptate eiusmod officia sunt. Nisi anim deserunt dolore
-    magna. `,
+    descMain: `We have selected for you a list of the finest and the most popular cocktails. By clicking on each Cocktail card, you will discover all the information related to the cocktail: what ingredients are needed and how to prepare it. `,
     imgRight: true,
     cardTitle: "Discover our cocktails",
     descCard: `Sint ullamco culpa nisi amet enim ut deserunt irure occaecat Lorem

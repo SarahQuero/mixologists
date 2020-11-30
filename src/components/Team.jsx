@@ -1,5 +1,5 @@
 import React from "react";
-import "./Style/Team.scss";
+import "./Style/Home.scss";
 import Jeremy from "../../public/assets/Jérémy.jpg";
 import Sarah from "../../public/assets/Sarah.jpg";
 import Florent from "../../public/assets/Florent.jpg";
@@ -10,10 +10,12 @@ function Team() {
       <div className="teamContainer">
         <h1>The Crew</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id commodi
-          mollitia, aut cum eaque praesentium assumenda voluptatem, voluptatibus
-          sint possimus aperiam amet minima sunt provident iure, deserunt rerum
-          quos a.
+          We are three tech-adventurers passionated about mixology: the art of
+          making cocktails. We've also travelled in many countries and
+          discovered the cocktail recipes on each country we've visited. Today,
+          we would like to share this passion with you to let you discover the
+          most exquisite cocktails that we've selected for you all around the
+          world.
         </p>
         <div className="memberContainer">
           <div
